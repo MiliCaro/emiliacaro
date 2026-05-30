@@ -88,26 +88,38 @@ img{display:block;max-width:100%}
 .titles{font-size:13.5px;color:var(--ink-faint);line-height:1.95}
 
 /* ---------------- BLOCKS ---------------- */
-.block{padding:clamp(60px,9vw,108px) 0}
+.block{padding:clamp(56px,7vw,92px) 0}
+
+/* two-column section layout: sticky-ish label left, content right */
+.block .wrap{display:grid;grid-template-columns:minmax(180px,240px) 1fr;gap:30px 64px;align-items:start}
+.block .wrap.narrow{max-width:var(--maxw)}
+.block.single .wrap{display:block}  /* opt-out for full-width sections */
+
 .label{
-  text-transform:uppercase;letter-spacing:.22em;font-size:12px;
-  color:var(--accent);font-weight:500;margin-bottom:34px;
+  text-transform:uppercase;letter-spacing:.18em;font-size:13px;
+  color:var(--accent);font-weight:500;margin:0;
+  padding-top:6px;
+}
+.section-title{
+  font-family:var(--display);font-weight:300;
+  font-size:clamp(28px,3.4vw,40px);line-height:1.04;letter-spacing:-.02em;
+  margin:0 0 28px;color:var(--ink);
 }
 .rule{border:0;border-top:1px solid var(--line);max-width:var(--maxw);margin:0 auto}
 
 /* bio */
-.bio-body p{font-size:19px;line-height:1.7;margin-bottom:20px;max-width:62ch}
+.bio-body p{font-size:19px;line-height:1.68;margin-bottom:20px;max-width:60ch}
 .quiet-link{
-  display:inline-block;margin-top:14px;font-size:14px;color:var(--ink-soft);
+  display:inline-block;margin-top:18px;font-size:14px;color:var(--ink-soft);
   text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .2s,color .2s;
 }
 .quiet-link:hover{color:var(--accent);border-color:var(--accent)}
 
 /* areas */
-.areas{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 60px}
-.area{border-top:1px solid var(--line);padding-top:22px}
-.area h3{font-family:var(--display);font-weight:400;font-size:23px;letter-spacing:-.01em;margin-bottom:12px}
-.area p{font-size:16px;line-height:1.62;color:var(--ink-soft);max-width:46ch}
+.areas{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 56px}
+.area{border-top:1px solid var(--line);padding-top:20px}
+.area h3{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:-.01em;margin-bottom:11px}
+.area p{font-size:16px;line-height:1.6;color:var(--ink-soft);max-width:46ch}
 
 /* positions */
 .positions{list-style:none}
@@ -153,6 +165,8 @@ img{display:block;max-width:100%}
   .hero-text{order:2;padding:46px 24px 64px}
   .positioning{max-width:none}
   .wrap{padding:0 24px}
+  .block .wrap{grid-template-columns:1fr;gap:14px}
+  .label{padding-top:0}
   .areas{grid-template-columns:1fr;gap:34px}
   .contact-grid{grid-template-columns:1fr;gap:26px}
   .positions li{flex-direction:column;gap:4px}
