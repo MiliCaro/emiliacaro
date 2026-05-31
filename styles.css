@@ -191,6 +191,30 @@ img{display:block;max-width:100%}
 .ci-mail{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);font-weight:300;text-decoration:none;color:var(--ink);transition:color .2s}
 .ci-mail:hover{color:var(--accent)}
 
+/* contact form */
+.contact-form{max-width:620px}
+.field{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.field label{text-transform:uppercase;letter-spacing:.13em;font-size:12px;color:var(--ink-faint)}
+.field input,.field select,.field textarea{
+  font-family:var(--body);font-size:17px;color:var(--ink);
+  background:transparent;border:0;border-bottom:1px solid var(--line);
+  padding:10px 0;transition:border-color .3s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--accent)}
+.field textarea{resize:vertical;line-height:1.5}
+.field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238c897c' fill='none' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center}
+.form-submit{
+  font-family:var(--body);font-size:13px;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--paper);background:var(--ink);border:0;cursor:pointer;
+  padding:16px 38px;margin-top:8px;transition:background .3s;
+}
+.form-submit:hover{background:var(--accent)}
+.form-submit:disabled{opacity:.5;cursor:default}
+.form-status{margin-top:20px;font-family:var(--display);font-style:italic;font-size:18px;min-height:1.2em}
+.form-status.ok{color:var(--ink)}
+.form-status.err{color:var(--accent)}
+
 /* footer */
 .footer{background:var(--dark);color:var(--dark-soft);padding:56px 0}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -219,6 +243,7 @@ img{display:block;max-width:100%}
   .area:nth-child(odd){padding-right:0;border-right:0}
   .area:nth-child(even){padding-left:0}
   .contact-grid{grid-template-columns:1fr;gap:30px}
+  .field-row{grid-template-columns:1fr;gap:0}
   .positions li{grid-template-columns:1fr;gap:4px}
   .pos-org{text-align:left}
 }
