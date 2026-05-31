@@ -204,12 +204,38 @@
         <h2 class="section-title" data-en="Get in touch" data-es="Contacto">Get in touch</h2>
       </div>
       <div class="col-right reveal d1">
-        <div class="contact-grid">
-          <div class="contact-item">
-            <span class="ci-label" data-en="Speaking invitations &amp; press" data-es="Invitaciones a conferencias y prensa">Speaking invitations &amp; press</span>
-            <a href="mailto:mariaemiliacaro@gmail.com" class="ci-mail">mariaemiliacaro@gmail.com</a>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqkzapw" method="POST">
+          <div class="field">
+            <label for="cf-subject" data-en="Reason for contact" data-es="Motivo de contacto">Reason for contact</label>
+            <select id="cf-subject" name="subject" required>
+              <option value="" disabled selected data-en="Select one…" data-es="Seleccionar…">Select one…</option>
+              <option value="Press" data-en="Press" data-es="Prensa">Press</option>
+              <option value="Speaking" data-en="Speaking" data-es="Charlas">Speaking</option>
+              <option value="Institutional proposal" data-en="Institutional proposal" data-es="Propuesta institucional">Institutional proposal</option>
+              <option value="Other" data-en="Other" data-es="Otros">Other</option>
+            </select>
           </div>
-        </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-name" data-en="Name" data-es="Nombre">Name</label>
+              <input type="text" id="cf-name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email" data-en="Email" data-es="Correo">Email</label>
+              <input type="email" id="cf-email" name="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-message" data-en="Message" data-es="Mensaje">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="form-submit"
+                  data-en="Send message" data-es="Enviar mensaje"
+                  data-sending-en="Sending…" data-sending-es="Enviando…">Send message</button>
+          <p class="form-status" id="formStatus"
+             data-ok-en="Thank you. Your message has been sent." data-ok-es="Gracias. Tu mensaje fue enviado."
+             data-err-en="Something went wrong. Please write to mariaemiliacaro@gmail.com." data-err-es="Hubo un error. Por favor escribí a mariaemiliacaro@gmail.com."></p>
+        </form>
       </div>
     </div>
   </section>
