@@ -68,4 +68,39 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
+
+  /* ---- Contact form (Formspree, async submit) ---- */
+  var form = document.getElementById('contactForm');
+  if (form) {
+    var btn = form.querySelector('.form-submit');
+    var status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.className = 'form-status';
+      status.textContent = '';
+      btn.disabled = true;
+      btn.textContent = btn.getAttribute('data-sending-' + current) || 'Sending…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (r) {
+        if (r.ok) {
+          form.reset();
+          status.className = 'form-status ok';
+          status.textContent = status.getAttribute('data-ok-' + current);
+        } else {
+          throw new Error('bad response');
+        }
+      }).catch(function () {
+        status.className = 'form-status err';
+        status.textContent = status.getAttribute('data-err-' + current);
+      }).finally(function () {
+        btn.disabled = false;
+        btn.textContent = btn.getAttribute('data-' + current) || 'Send message';
+      });
+    });
+  }
 })();
