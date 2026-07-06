@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- =========================================================
+     PLANTILLA DE ARTÍCULO, cómo publicar una nota nueva
+     =========================================================
+     1. Duplicá este archivo y renombralo con el "slug" de la nota,
+        en minúsculas y con guiones. Ej: writing/mi-nueva-nota.html
+     2. Reemplazá TODO lo que dice REEMPLAZAR (título, bajada, texto)
+        en sus dos idiomas: data-en="..."  y  data-es="..."
+        El texto entre las etiquetas puede quedar igual al data-en.
+     3. Agregá o borrá párrafos <p>, subtítulos <h2> y citas <blockquote>
+        según necesites.
+     4. En index.html, dentro de <div class="writing-list">, agregá
+        arriba de todo un bloque <a class="writing-item"> que apunte
+        a este archivo (copiá el que ya está de ejemplo y cambialo).
+     ========================================================= -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- REEMPLAZAR: título de la pestaña -->
+<title>REEMPLAZAR título, Emilia Caro</title>
+<!-- REEMPLAZAR: descripción para Google -->
+<meta name="description" content="REEMPLAZAR con la bajada de la nota.">
+
+<!-- Open Graph, lo que se ve al compartir en LinkedIn / WhatsApp -->
+<meta property="og:title" content="REEMPLAZAR título">
+<meta property="og:description" content="REEMPLAZAR con la bajada de la nota.">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<!-- ============ NAV (no tocar) ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-name">Emilia Caro</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#bio"      data-en="Bio"       data-es="Bio">Bio</a>
+      <a href="../index.html#work"     data-en="Work"      data-es="Áreas">Work</a>
+      <a href="../index.html#speaking" data-en="Speaking"  data-es="Conferencias">Speaking</a>
+      <a href="../index.html#writing"  data-en="Writing"   data-es="Escritos">Writing</a>
+      <a href="../index.html#contact"  data-en="Contact"   data-es="Contacto">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang" id="langToggle" aria-label="Switch language">
+        <span data-lang="en" class="on">EN</span><span class="slash">/</span><span data-lang="es">ES</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="../index.html#bio"      data-en="Bio"      data-es="Bio">Bio</a>
+    <a href="../index.html#work"     data-en="Work"     data-es="Áreas">Work</a>
+    <a href="../index.html#speaking" data-en="Speaking" data-es="Conferencias">Speaking</a>
+    <a href="../index.html#writing"  data-en="Writing"  data-es="Escritos">Writing</a>
+    <a href="../index.html#contact"  data-en="Contact"  data-es="Contacto">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <article>
+    <!-- ============ ENCABEZADO ============ -->
+    <header class="article-head">
+      <a href="../index.html#writing" class="article-back"
+         data-en="← Back to Writing" data-es="← Volver a Escritos">← Back to Writing</a>
+
+      <!-- REEMPLAZAR: categoría y año -->
+      <p class="article-meta"
+         data-en="Opinion · 2026 · Topic"
+         data-es="Opinión · 2026 · Tema">Opinion · 2026 · Topic</p>
+
+      <!-- REEMPLAZAR: título -->
+      <h1 data-en="REEMPLAZAR title in English"
+          data-es="REEMPLAZAR título en español">REEMPLAZAR title in English</h1>
+
+      <!-- REEMPLAZAR: bajada (una o dos líneas) -->
+      <p class="article-standfirst"
+         data-en="REEMPLAZAR standfirst in English."
+         data-es="REEMPLAZAR bajada en español.">
+        REEMPLAZAR standfirst in English.
+      </p>
+    </header>
+
+    <!-- ============ CUERPO ============ -->
+    <div class="article-body">
+      <!-- Repetí este <p> por cada párrafo. Podés intercalar <h2> y <blockquote>. -->
+      <p data-en="REEMPLAZAR paragraph in English."
+         data-es="REEMPLAZAR párrafo en español.">
+        REEMPLAZAR paragraph in English.
+      </p>
+
+      <h2 data-en="REEMPLAZAR subheading"
+          data-es="REEMPLAZAR subtítulo">REEMPLAZAR subheading</h2>
+
+      <p data-en="REEMPLAZAR paragraph in English."
+         data-es="REEMPLAZAR párrafo en español.">
+        REEMPLAZAR paragraph in English.
+      </p>
+
+      <blockquote data-en="REEMPLAZAR a pull quote in English."
+                  data-es="REEMPLAZAR una cita destacada en español.">
+        REEMPLAZAR a pull quote in English.
+      </blockquote>
+    </div>
+
+    <!-- REEMPLAZAR: firma / lugar / fecha -->
+    <p class="article-sign"
+       data-en="Emilia Caro, Buenos Aires, 2026"
+       data-es="Emilia Caro, Buenos Aires, 2026">Emilia Caro, Buenos Aires, 2026</p>
+
+    <div class="article-foot">
+      <hr class="rule" style="max-width:680px">
+      <a href="../index.html#writing" class="article-back" style="margin:34px 0 0"
+         data-en="← Back to Writing" data-es="← Volver a Escritos">← Back to Writing</a>
+    </div>
+  </article>
+</main>
+
+<!-- ============ FOOTER (no tocar) ============ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="footer-name">Emilia Caro</span>
+    <span class="footer-links">
+      <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener">Instagram</a>
+    </span>
+    <span class="footer-year">© <span id="year"></span></span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
