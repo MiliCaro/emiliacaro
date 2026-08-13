@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What do you actually know about women's health? · Emilia Caro</title>
+<meta name="description" content="Nueve preguntas sobre la salud de las mujeres en Argentina y América Latina, donde la respuesta intuitiva suele ser la equivocada. Cada resultado viene con el dato y su fuente.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://emiliacaro.com/tools/quiz.html">
+
+<meta property="og:site_name" content="Emilia Caro">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://emiliacaro.com/tools/quiz.html">
+<meta property="og:title" content="¿Cuánto sabés realmente sobre la salud de las mujeres?">
+<meta property="og:description" content="Nueve preguntas donde la respuesta intuitiva suele ser la equivocada.">
+<meta property="og:image" content="https://emiliacaro.com/portrait.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://emiliacaro.com/portrait.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-name">Emilia Caro</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#bio"      data-en="Bio"      data-es="Bio">Bio</a>
+      <a href="../index.html#work"     data-en="Work"     data-es="Áreas">Work</a>
+      <a href="../index.html#speaking" data-en="Speaking" data-es="Conferencias">Speaking</a>
+      <a href="../index.html#writing"  data-en="Writing"  data-es="Escritos">Writing</a>
+      <a href="../index.html#press"    data-en="Press"    data-es="Prensa">Press</a>
+      <a href="../index.html#tools"    data-en="Tools"    data-es="Herramientas">Tools</a>
+      <a href="../index.html#contact"  data-en="Contact"  data-es="Contacto">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang" id="langToggle" aria-label="Switch language">
+        <span data-lang="en" class="on">EN</span><span class="slash">/</span><span data-lang="es">ES</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="../index.html#bio"      data-en="Bio"      data-es="Bio">Bio</a>
+    <a href="../index.html#work"     data-en="Work"     data-es="Áreas">Work</a>
+    <a href="../index.html#speaking" data-en="Speaking" data-es="Conferencias">Speaking</a>
+    <a href="../index.html#writing"  data-en="Writing"  data-es="Escritos">Writing</a>
+    <a href="../index.html#press"    data-en="Press"    data-es="Prensa">Press</a>
+    <a href="../index.html#tools"    data-en="Tools"    data-es="Herramientas">Tools</a>
+    <a href="../index.html#contact"  data-en="Contact"  data-es="Contacto">Contact</a>
+  </nav>
+</header>
+
+<main class="tool-page">
+  <div class="tool-wrap">
+
+    <div class="tool-head">
+      <a href="../index.html#tools" class="article-back"
+         data-en="← Back to Tools" data-es="← Volver a Herramientas">← Back to Tools</a>
+      <h1 data-en="What do you actually know about women's health?"
+          data-es="¿Cuánto sabés realmente sobre la salud de las mujeres?">What do you actually know about women's health?</h1>
+      <p class="lede"
+         data-en="Nine questions. In almost all of them the intuitive answer is the wrong one, and that is the point: what we take for granted about women's health is mostly inherited, not measured."
+         data-es="Nueve preguntas. En casi todas, la respuesta intuitiva es la equivocada, y ese es justamente el punto: lo que damos por sentado sobre la salud de las mujeres es heredado, no medido.">
+        Nine questions. In almost all of them the intuitive answer is the wrong one, and that is the point: what we take for granted about women's health is mostly inherited, not measured.
+      </p>
+      <p class="tool-note"
+         data-en="Nothing is stored or sent. Everything runs in your browser."
+         data-es="No se guarda ni se envía nada. Todo corre en tu navegador.">Nothing is stored or sent. Everything runs in your browser.</p>
+    </div>
+
+    <!-- ======== QUIZ ======== -->
+    <section class="panel" id="quizPanel">
+      <div class="quiz-top">
+        <span class="q-count" id="qCount">01 / 09</span>
+        <span class="q-score" id="qScore"></span>
+      </div>
+      <div class="quiz-bar"><span id="qBar"></span></div>
+
+      <h2 class="q-text" id="qText"></h2>
+      <div class="q-options" id="qOptions"></div>
+
+      <div class="q-feedback" id="qFeedback" role="status" aria-live="polite">
+        <p class="q-verdict" id="qVerdict"></p>
+        <p class="q-datum" id="qDatum"></p>
+        <span class="q-source" id="qSource"></span>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="btn-p" id="qNext" style="display:none"></button>
+      </div>
+    </section>
+
+    <!-- ======== RESULTADO ======== -->
+    <section class="panel result" id="resultPanel">
+      <p class="q-count" id="rLabel"></p>
+      <p class="score-big"><span id="rScore">0</span><span class="of" id="rOf">/9</span></p>
+      <p class="score-verdict" id="rVerdict"></p>
+      <p class="score-note" id="rNote"></p>
+
+      <div class="result-list" id="rList"></div>
+
+      <div class="result-cta">
+        <button class="btn-p" id="rShare"></button>
+        <a class="btn-p" href="brecha.html" id="rNextTool"></a>
+        <a class="btn-s" href="../index.html#writing" id="rRead"></a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="footer-name">Emilia Caro</span>
+    <span class="footer-links">
+      <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener">Instagram</a>
+    </span>
+    <span class="footer-year">© <span id="year"></span></span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+/* =========================================================
+   Quiz de mitos — 9 preguntas, bilingüe, 100% client-side.
+
+   PARA EDITAR: cada objeto de QUESTIONS tiene
+     q       pregunta
+     opts    opciones en orden de aparición
+     correct índice (base 0) de la opción correcta
+     datum   el dato que se revela después de responder
+     src     etiqueta y link de la fuente
+   Verificá cada cifra contra la fuente antes de publicar.
+   ========================================================= */
+(function () {
+  'use strict';
+
+  var QUESTIONS = [
+    {
+      q: {
+        en: "What do more women die of in Argentina?",
+        es: "¿De qué se mueren más las mujeres en Argentina?"
+      },
+      opts: [
+        { en: "Breast cancer", es: "Cáncer de mama" },
+        { en: "Heart attacks and strokes", es: "Infartos y ACV" },
+        { en: "Lung cancer", es: "Cáncer de pulmón" }
+      ],
+      correct: 1,
+      datum: {
+        en: "More women die of cardiovascular disease than of breast cancer. The symptoms present differently in women, are studied less, diagnosed later and treated worse. Breast cancer gets the campaigns; the heart gets the deaths.",
+        es: "Mueren más mujeres por enfermedad cardiovascular que por cáncer de mama. Los síntomas se presentan distinto en mujeres, se estudian menos, se diagnostican más tarde y se tratan peor. El cáncer de mama se lleva las campañas; el corazón se lleva las muertes."
+      },
+      src: { label: "Infobae · 2024", url: "https://www.infobae.com/sociedad/2024/01/02/emilia-caro-en-la-argentina-se-mueren-mas-mujeres-por-infartos-y-por-acv-que-por-cancer-de-mama/" }
+    },
+    {
+      q: {
+        en: "What share of Argentina's health workforce are women?",
+        es: "¿Qué porcentaje de la fuerza laboral en salud de Argentina son mujeres?"
+      },
+      opts: [
+        { en: "Around 40%", es: "Alrededor del 40%" },
+        { en: "Around 55%", es: "Alrededor del 55%" },
+        { en: "Around 70%", es: "Alrededor del 70%" }
+      ],
+      correct: 2,
+      datum: {
+        en: "Roughly seven out of every ten people working in health are women. The system runs on their labour.",
+        es: "Aproximadamente siete de cada diez personas que trabajan en salud son mujeres. El sistema funciona sobre su trabajo."
+      },
+      src: { label: "Infobae · 2024", url: "https://www.infobae.com/sociedad/2024/01/02/emilia-caro-en-la-argentina-se-mueren-mas-mujeres-por-infartos-y-por-acv-que-por-cancer-de-mama/" }
+    },
+    {
+      q: {
+        en: "And what share of decision-making positions do they hold?",
+        es: "¿Y qué porcentaje de las posiciones de decisión ocupan?"
+      },
+      opts: [
+        { en: "Under 25%", es: "Menos del 25%" },
+        { en: "Around 50%", es: "Cerca del 50%" },
+        { en: "Around 65%", es: "Alrededor del 65%" }
+      ],
+      correct: 0,
+      datum: {
+        en: "Women are the majority of the workforce and a minority of its leadership. The gap is not a pipeline problem: the pipeline is full. It is a problem of who gets promoted.",
+        es: "Las mujeres son mayoría en la fuerza laboral y minoría en su conducción. La brecha no es un problema de cantera: la cantera está llena. Es un problema de a quién se promueve."
+      },
+      src: { label: "Infobae · 2026", url: "https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" }
+    },
+    {
+      q: {
+        en: "How long does it take, on average, to diagnose endometriosis in Latin America?",
+        es: "¿Cuánto tarda en promedio el diagnóstico de endometriosis en América Latina?"
+      },
+      opts: [
+        { en: "1 to 2 years", es: "1 a 2 años" },
+        { en: "3 to 4 years", es: "3 a 4 años" },
+        { en: "7 to 10 years", es: "7 a 10 años" }
+      ],
+      correct: 2,
+      datum: {
+        en: "Between seven and ten years. That is not a waiting time, it is a decade of pain treated as exaggeration.",
+        es: "Entre siete y diez años. Eso no es un tiempo de espera, es una década de dolor tratado como exageración."
+      },
+      src: { label: "Infobae · 2026", url: "https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" }
+    },
+    {
+      q: {
+        en: "Women live longer than men. How much of their life do they spend in poor health?",
+        es: "Las mujeres viven más que los varones. ¿Cuánto de su vida pasan enfermas?"
+      },
+      opts: [
+        { en: "25% more than men", es: "Un 25% más que los varones" },
+        { en: "About the same", es: "Más o menos lo mismo" },
+        { en: "Less than men", es: "Menos que los varones" }
+      ],
+      correct: 0,
+      datum: {
+        en: "We live longer and spend a quarter more of that life unwell. Living longer is not the same as living better.",
+        es: "Vivimos más y pasamos un cuarto más de esa vida enfermas. Vivir más no es lo mismo que vivir mejor."
+      },
+      src: { label: "Emilia Caro · 2025", url: "../writing/salud-de-la-mujer-problema-mas-costoso.html" }
+    },
+    {
+      q: {
+        en: "Where does health rank among Argentines' concerns?",
+        es: "¿Qué lugar ocupa la salud entre las preocupaciones de los argentinos?"
+      },
+      opts: [
+        { en: "2nd", es: "2do" },
+        { en: "6th", es: "6to" },
+        { en: "12th", es: "12mo" }
+      ],
+      correct: 2,
+      datum: {
+        en: "Twelfth, far below wages, jobs and crime. That is why doing nothing in health carries no political cost: it barely registers.",
+        es: "Duodécimo, muy por debajo de salarios, empleo e inseguridad. Por eso no hacer nada en salud no tiene costo político: casi no aparece en el radar."
+      },
+      src: { label: "Emilia Caro · 2026", url: "../writing/salud-sin-costo-politico-argentina.html" }
+    },
+    {
+      q: {
+        en: "How much social return does each dollar invested in prevention generate?",
+        es: "¿Cuánto retorno social genera cada dólar invertido en prevención?"
+      },
+      opts: [
+        { en: "USD 1.20", es: "USD 1,20" },
+        { en: "USD 4.30", es: "USD 4,30" },
+        { en: "USD 12.00", es: "USD 12,00" }
+      ],
+      correct: 1,
+      datum: {
+        en: "Prevention does not compete with treatment. It makes it cheaper. The problem is that the return lands in a different budget, and often in a different government.",
+        es: "La prevención no compite con el tratamiento. Lo abarata. El problema es que el retorno cae en otro presupuesto, y muchas veces en otro gobierno."
+      },
+      src: { label: "Infobae · 2026", url: "https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" }
+    },
+    {
+      q: {
+        en: "What share of Latin American women report barriers to accessing health care?",
+        es: "¿Qué porcentaje de las mujeres de América Latina reporta barreras de acceso a la salud?"
+      },
+      opts: [
+        { en: "57%", es: "57%" },
+        { en: "38%", es: "38%" },
+        { en: "22%", es: "22%" }
+      ],
+      correct: 0,
+      datum: {
+        en: "More than half. Not a minority failing to navigate the system: a majority running into it.",
+        es: "Más de la mitad. No es una minoría que no sabe moverse en el sistema: es una mayoría que choca contra él."
+      },
+      src: { label: "Infobae · 2026", url: "https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" }
+    },
+    {
+      q: {
+        en: "How much of national GDP is affected by women's health?",
+        es: "¿Cuánto del PBI nacional está afectado por la salud de las mujeres?"
+      },
+      opts: [
+        { en: "0.3%", es: "0,3%" },
+        { en: "3%", es: "3%" },
+        { en: "11%", es: "11%" }
+      ],
+      correct: 1,
+      datum: {
+        en: "Women's health is not a sectoral issue, it is an economic one. Which is precisely why it should be discussed at the economic table, and almost never is.",
+        es: "La salud de las mujeres no es un tema sectorial, es un tema económico. Que es exactamente por lo que debería discutirse en la mesa económica, y casi nunca se discute."
+      },
+      src: { label: "Infobae · 2026", url: "https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" }
+    }
+  ];
+
+  var T = {
+    count:    { en: function (a, b) { return pad(a) + " / " + pad(b); },
+                es: function (a, b) { return pad(a) + " / " + pad(b); } },
+    score:    { en: function (n) { return n + " right so far"; },
+                es: function (n) { return n + " correctas hasta acá"; } },
+    right:    { en: "Correct", es: "Correcto" },
+    wrong:    { en: "Not quite", es: "No exactamente" },
+    next:     { en: "Next question", es: "Siguiente pregunta" },
+    seeResult:{ en: "See my result", es: "Ver mi resultado" },
+    rLabel:   { en: "Your result", es: "Tu resultado" },
+    share:    { en: "Copy my result", es: "Copiar mi resultado" },
+    shared:   { en: "Copied ✓", es: "Copiado ✓" },
+    nextTool: { en: "Now measure your institution", es: "Ahora medí tu institución" },
+    read:     { en: "Read the pieces behind this", es: "Leer los escritos detrás de esto" },
+    verdicts: [
+      { max: 3,
+        t: { en: "Your intuition was wrong almost every time.",
+             es: "Tu intuición falló casi siempre." },
+        n: { en: "That is not a failure of attention. It is what happens when a whole field was built without half the population in the room: the defaults you inherited are simply not accurate.",
+             es: "No es una falla de atención. Es lo que pasa cuando un campo entero se construyó sin la mitad de la población en la sala: lo que heredaste como obvio sencillamente no es exacto." } },
+      { max: 6,
+        t: { en: "You know more than most, and half of it still got past you.",
+             es: "Sabés más que la mayoría, y aun así se te escapó la mitad." },
+        n: { en: "The questions you missed are usually the ones nobody repeats out loud. That is where the gap actually lives: not in what is denied, but in what is never said.",
+             es: "Las que fallaste suelen ser las que nadie repite en voz alta. Ahí es donde vive la brecha: no en lo que se niega, sino en lo que nunca se dice." } },
+      { max: 9,
+        t: { en: "You know the data. The question is what you do with it.",
+             es: "Conocés los datos. La pregunta es qué hacés con ellos." },
+        n: { en: "Knowing the numbers is the easy part. Changing who sits at the table where they get used is the hard one, and it is the only one that moves anything.",
+             es: "Conocer los números es la parte fácil. Cambiar quién se sienta en la mesa donde se usan es la difícil, y es la única que mueve algo." } }
+    ],
+    shareText: {
+      en: function (s, t) { return "I got " + s + "/" + t + " on \"What do you actually know about women's health?\" — nine questions where the intuitive answer is usually wrong. https://emiliacaro.com/tools/quiz.html"; },
+      es: function (s, t) { return "Saqué " + s + "/" + t + " en \"¿Cuánto sabés realmente sobre la salud de las mujeres?\", nueve preguntas donde la respuesta intuitiva suele ser la equivocada. https://emiliacaro.com/tools/quiz.html"; }
+    }
+  };
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function lang() { return window.siteLang === 'es' ? 'es' : 'en'; }
+  function $(id) { return document.getElementById(id); }
+
+  var idx = 0;
+  var score = 0;
+  var answers = [];   // índice elegido por pregunta, null si sin responder
+  var locked = false; // true una vez respondida la pregunta actual
+
+  function renderQuestion() {
+    var L = lang();
+    var q = QUESTIONS[idx];
+
+    $('qCount').textContent = T.count[L](idx + 1, QUESTIONS.length);
+    $('qScore').textContent = idx === 0 && answers.length === 0 ? '' : T.score[L](score);
+    $('qBar').style.width = ((idx) / QUESTIONS.length * 100) + '%';
+    $('qText').textContent = q.q[L];
+
+    var box = $('qOptions');
+    box.innerHTML = '';
+    q.opts.forEach(function (opt, i) {
+      var b = document.createElement('button');
+      b.className = 'q-opt';
+      b.type = 'button';
+      b.innerHTML = '<span class="mark">' + String.fromCharCode(65 + i) + '</span><span>' + opt[L] + '</span>';
+      b.addEventListener('click', function () { answer(i); });
+      box.appendChild(b);
+    });
+
+    // si ya se respondió (por ejemplo tras cambiar de idioma), restaurar estado
+    if (locked && answers[idx] !== undefined && answers[idx] !== null) {
+      paintAnswer(answers[idx]);
+      showFeedback(answers[idx] === q.correct);
+    } else {
+      $('qFeedback').className = 'q-feedback';
+      $('qNext').style.display = 'none';
+    }
+  }
+
+  function paintAnswer(chosen) {
+    var q = QUESTIONS[idx];
+    var btns = $('qOptions').querySelectorAll('.q-opt');
+    btns.forEach(function (b, i) {
+      b.disabled = true;
+      if (i === q.correct) b.classList.add('correct');
+      else if (i === chosen) b.classList.add('wrong');
+      else b.classList.add('dim');
+    });
+  }
+
+  function showFeedback(ok) {
+    var L = lang();
+    var q = QUESTIONS[idx];
+    var v = $('qVerdict');
+    v.textContent = ok ? T.right[L] : T.wrong[L];
+    v.className = 'q-verdict' + (ok ? ' ok' : '');
+    $('qDatum').textContent = q.datum[L];
+    $('qSource').innerHTML = '<a href="' + q.src.url + '" target="_blank" rel="noopener">' + q.src.label + ' ↗</a>';
+    $('qFeedback').className = 'q-feedback show';
+
+    var next = $('qNext');
+    next.textContent = idx === QUESTIONS.length - 1 ? T.seeResult[L] : T.next[L];
+    next.style.display = '';
+  }
+
+  function answer(chosen) {
+    if (locked) return;
+    locked = true;
+    answers[idx] = chosen;
+    var ok = chosen === QUESTIONS[idx].correct;
+    if (ok) score++;
+    $('qScore').textContent = T.score[lang()](score);
+    paintAnswer(chosen);
+    showFeedback(ok);
+  }
+
+  $('qNext').addEventListener('click', function () {
+    if (idx === QUESTIONS.length - 1) { showResult(); return; }
+    idx++;
+    locked = false;
+    renderQuestion();
+    $('quizPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  function showResult() {
+    var L = lang();
+    $('quizPanel').style.display = 'none';
+    $('resultPanel').classList.add('show');
+    renderResult();
+    $('resultPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderResult() {
+    var L = lang();
+    var v = T.verdicts.find(function (b) { return score <= b.max; });
+
+    $('rLabel').textContent = T.rLabel[L];
+    $('rScore').textContent = score;
+    $('rOf').textContent = '/' + QUESTIONS.length;
+    $('rVerdict').textContent = v.t[L];
+    $('rNote').textContent = v.n[L];
+    $('rShare').textContent = T.share[L];
+    $('rNextTool').textContent = T.nextTool[L];
+    $('rRead').textContent = T.read[L];
+
+    var list = $('rList');
+    list.innerHTML = '';
+    QUESTIONS.forEach(function (q, i) {
+      var ok = answers[i] === q.correct;
+      var row = document.createElement('div');
+      row.className = 'result-row ' + (ok ? 'ok' : 'no');
+      row.innerHTML = '<span class="rmark">' + (ok ? '✓' : '✕') + '</span>' +
+                      '<span class="rq">' + q.q[L] + '</span>';
+      list.appendChild(row);
+    });
+  }
+
+  $('rShare').addEventListener('click', function () {
+    var L = lang();
+    var text = T.shareText[L](score, QUESTIONS.length);
+    var btn = this;
+    var done = function () {
+      btn.textContent = T.shared[L];
+      setTimeout(function () { btn.textContent = T.share[L]; }, 2200);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(done);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  });
+
+  // el toggle EN/ES vuelve a dibujar lo que está en pantalla
+  document.addEventListener('langchange', function () {
+    if ($('resultPanel').classList.contains('show')) renderResult();
+    else renderQuestion();
+  });
+
+  renderQuestion();
+})();
+</script>
+</body>
+</html>

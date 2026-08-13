@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measure your institution's leadership gap · Emilia Caro</title>
+<meta name="description" content="Cargá cuatro números de tu organización y calculá su brecha de representación en cargos de conducción, contra el benchmark del sector salud.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://emiliacaro.com/tools/brecha.html">
+
+<meta property="og:site_name" content="Emilia Caro">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://emiliacaro.com/tools/brecha.html">
+<meta property="og:title" content="Medí la brecha de liderazgo de tu institución">
+<meta property="og:description" content="Cuatro números y ves tu brecha de representación contra el benchmark del sector.">
+<meta property="og:image" content="https://emiliacaro.com/portrait.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://emiliacaro.com/portrait.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-name">Emilia Caro</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#bio"      data-en="Bio"      data-es="Bio">Bio</a>
+      <a href="../index.html#work"     data-en="Work"     data-es="Áreas">Work</a>
+      <a href="../index.html#speaking" data-en="Speaking" data-es="Conferencias">Speaking</a>
+      <a href="../index.html#writing"  data-en="Writing"  data-es="Escritos">Writing</a>
+      <a href="../index.html#press"    data-en="Press"    data-es="Prensa">Press</a>
+      <a href="../index.html#tools"    data-en="Tools"    data-es="Herramientas">Tools</a>
+      <a href="../index.html#contact"  data-en="Contact"  data-es="Contacto">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang" id="langToggle" aria-label="Switch language">
+        <span data-lang="en" class="on">EN</span><span class="slash">/</span><span data-lang="es">ES</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="../index.html#bio"      data-en="Bio"      data-es="Bio">Bio</a>
+    <a href="../index.html#work"     data-en="Work"     data-es="Áreas">Work</a>
+    <a href="../index.html#speaking" data-en="Speaking" data-es="Conferencias">Speaking</a>
+    <a href="../index.html#writing"  data-en="Writing"  data-es="Escritos">Writing</a>
+    <a href="../index.html#press"    data-en="Press"    data-es="Prensa">Press</a>
+    <a href="../index.html#tools"    data-en="Tools"    data-es="Herramientas">Tools</a>
+    <a href="../index.html#contact"  data-en="Contact"  data-es="Contacto">Contact</a>
+  </nav>
+</header>
+
+<main class="tool-page">
+  <div class="tool-wrap">
+
+    <div class="tool-head">
+      <a href="../index.html#tools" class="article-back"
+         data-en="← Back to Tools" data-es="← Volver a Herramientas">← Back to Tools</a>
+      <h1 data-en="Measure your institution's leadership gap"
+          data-es="Medí la brecha de liderazgo de tu institución">Measure your institution's leadership gap</h1>
+      <p class="lede"
+         data-en="This does not measure you. It measures your organisation. Four numbers are enough to see the distance between who does the work and who decides how it is done."
+         data-es="Esto no te mide a vos. Mide a tu organización. Cuatro números alcanzan para ver la distancia entre quién hace el trabajo y quién decide cómo se hace.">
+        This does not measure you. It measures your organisation. Four numbers are enough to see the distance between who does the work and who decides how it is done.
+      </p>
+      <p class="tool-note"
+         data-en="Nothing is stored or sent. Everything runs in your browser."
+         data-es="No se guarda ni se envía nada. Todo corre en tu navegador.">Nothing is stored or sent. Everything runs in your browser.</p>
+    </div>
+
+    <section class="calc-grid">
+
+      <div class="calc-inputs">
+        <p class="calc-legend" data-en="Your institution" data-es="Tu institución">Your institution</p>
+
+        <div class="field">
+          <label for="cTotal" data-en="Total staff" data-es="Personal total">Total staff</label>
+          <input type="number" id="cTotal" min="1" step="1" inputmode="numeric" placeholder="340">
+        </div>
+        <div class="field">
+          <label for="cPct" data-en="% who are women" data-es="% que son mujeres">% who are women</label>
+          <input type="number" id="cPct" min="0" max="100" step="1" inputmode="numeric" placeholder="72">
+        </div>
+        <div class="field">
+          <label for="cLead" data-en="Leadership positions" data-es="Cargos de conducción">Leadership positions</label>
+          <input type="number" id="cLead" min="1" step="1" inputmode="numeric" placeholder="18">
+        </div>
+        <div class="field">
+          <label for="cLeadW" data-en="Held by women" data-es="Ocupados por mujeres">Held by women</label>
+          <input type="number" id="cLeadW" min="0" step="1" inputmode="numeric" placeholder="4">
+        </div>
+
+        <button class="btn-s" id="cReset" type="button"
+                data-en="Clear" data-es="Limpiar">Clear</button>
+      </div>
+
+      <div class="calc-out" id="calcOut">
+        <p class="calc-legend" data-en="Result" data-es="Resultado">Result</p>
+
+        <div id="cEmpty" class="calc-empty">
+          <p data-en="Fill in the four fields and the result appears here. For reference, this is where the health sector sits:"
+             data-es="Completá los cuatro campos y el resultado aparece acá. Como referencia, así está parado el sector salud:">Fill in the four fields and the result appears here. For reference, this is where the health sector sits:</p>
+          <div class="calc-preview" aria-hidden="true">
+            <div class="bar-row">
+              <span class="bl">
+                <span data-en="Sector · workforce" data-es="Sector · fuerza laboral">Sector · workforce</span>
+                <span class="bv">70%</span>
+              </span>
+              <span class="bar workforce"><span style="width:70%"></span></span>
+            </div>
+            <div class="bar-row">
+              <span class="bl">
+                <span data-en="Sector · leadership" data-es="Sector · conducción">Sector · leadership</span>
+                <span class="bv">25%</span>
+              </span>
+              <span class="bar leadership"><span style="width:25%"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="cResult" style="display:none">
+          <div class="bar-row">
+            <span class="bl">
+              <span data-en="Workforce" data-es="Fuerza laboral">Workforce</span>
+              <span class="bv" id="bWork">0%</span>
+            </span>
+            <span class="bar workforce"><span id="barWork"></span></span>
+          </div>
+          <div class="bar-row">
+            <span class="bl">
+              <span data-en="Leadership" data-es="Conducción">Leadership</span>
+              <span class="bv" id="bLead">0%</span>
+            </span>
+            <span class="bar leadership"><span id="barLead"></span></span>
+          </div>
+
+          <div class="gap-figure">
+            <p class="gf" id="gapNum">0</p>
+            <p class="gl" id="gapLabel"></p>
+          </div>
+
+          <p class="gap-read" id="gapRead"></p>
+          <p class="gap-bench" id="gapBench"></p>
+
+          <div class="result-cta">
+            <button class="btn-p" id="cCopy" type="button"></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <p class="tool-note" style="margin-top:26px"
+       data-en="Sector benchmark: women are about 70% of the health workforce and under 25% of its leadership (Infobae, 2024 and 2026)."
+       data-es="Benchmark del sector: las mujeres son cerca del 70% de la fuerza laboral en salud y menos del 25% de su conducción (Infobae, 2024 y 2026).">
+      Sector benchmark: women are about 70% of the health workforce and under 25% of its leadership (Infobae, 2024 and 2026).
+    </p>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="footer-name">Emilia Caro</span>
+    <span class="footer-links">
+      <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener">Instagram</a>
+    </span>
+    <span class="footer-year">© <span id="year"></span></span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+/* =========================================================
+   Calculadora de brecha de liderazgo — 100% client-side.
+   Benchmark del sector: 70% de la fuerza laboral, <25% de la conducción.
+   ========================================================= */
+(function () {
+  'use strict';
+
+  var BENCH_WORK = 70;   // % de mujeres en la fuerza laboral del sector
+  var BENCH_LEAD = 25;   // % de mujeres en la conducción del sector
+  var BENCH_GAP  = BENCH_WORK - BENCH_LEAD;  // 45 puntos
+
+  var T = {
+    gapLabel: {
+      en: "points of representation gap between your workforce and your leadership",
+      es: "puntos de brecha de representación entre tu fuerza laboral y tu conducción"
+    },
+    gapLabelNeg: {
+      en: "points: your leadership has a higher share of women than your workforce",
+      es: "puntos: tu conducción tiene mayor proporción de mujeres que tu plantilla"
+    },
+    copy:   { en: "Copy summary", es: "Copiar resumen" },
+    copied: { en: "Copied ✓", es: "Copiado ✓" },
+    needed: {
+      en: function (n) {
+        return n === 1
+          ? "Closing it would take 1 more woman in a leadership position."
+          : "Closing it would take " + n + " more women in leadership positions.";
+      },
+      es: function (n) {
+        return n === 1
+          ? "Cerrarla requeriría 1 mujer más en un cargo de conducción."
+          : "Cerrarla requeriría " + n + " mujeres más en cargos de conducción.";
+      }
+    },
+    reads: [
+      { max: 0,
+        en: "Your leadership reflects your workforce, or exceeds it. That is uncommon in health, and worth saying out loud rather than assuming it is normal.",
+        es: "Tu conducción refleja a tu fuerza laboral, o la supera. Eso es poco común en salud, y conviene decirlo en voz alta en vez de asumir que es lo normal." },
+      { max: 10,
+        en: "A small gap, but not zero. At this size it usually comes down to a handful of specific appointments rather than a structural pattern.",
+        es: "Una brecha chica, pero no cero. En esta magnitud suele resolverse en un puñado de designaciones concretas, no en un patrón estructural." },
+      { max: 25,
+        en: "A visible gap. Big enough that it is not chance, small enough that it is fixable within a normal turnover cycle.",
+        es: "Una brecha visible. Lo bastante grande como para que no sea azar, lo bastante chica como para corregirse dentro de un ciclo normal de recambio." },
+      { max: 45,
+        en: "You are inside the typical range for the health sector, which is not a compliment: the sector average is itself a gap of roughly 45 points.",
+        es: "Estás dentro del rango típico del sector salud, lo que no es un elogio: el promedio del sector es de por sí una brecha de unos 45 puntos." },
+      { max: 999,
+        en: "You are below the sector average, and the sector average is already low. At this distance the issue is not the pipeline: your workforce is full of candidates who are not being promoted.",
+        es: "Estás por debajo del promedio del sector, y el promedio del sector ya es bajo. A esta distancia el problema no es la cantera: tu plantilla está llena de candidatas que no están siendo promovidas." }
+    ],
+    bench: {
+      en: function (gap) {
+        var d = Math.round(gap - BENCH_GAP);
+        if (d === 0) return "Sector benchmark: 45 points · you are exactly at the average";
+        return d > 0
+          ? "Sector benchmark: 45 points · you are " + d + " points worse than the average"
+          : "Sector benchmark: 45 points · you are " + Math.abs(d) + " points better than the average";
+      },
+      es: function (gap) {
+        var d = Math.round(gap - BENCH_GAP);
+        if (d === 0) return "Benchmark del sector: 45 puntos · estás exactamente en el promedio";
+        return d > 0
+          ? "Benchmark del sector: 45 puntos · estás " + d + " puntos peor que el promedio"
+          : "Benchmark del sector: 45 puntos · estás " + Math.abs(d) + " puntos mejor que el promedio";
+      }
+    },
+    summary: {
+      en: function (w, l, gap, need) {
+        return "Leadership gap in my institution: " + w + "% of the workforce are women, " + l +
+               "% of leadership positions. A gap of " + gap + " points." +
+               (need > 0 ? " Closing it: " + need + " more women in leadership." : "") +
+               " Calculated at https://emiliacaro.com/tools/brecha.html";
+      },
+      es: function (w, l, gap, need) {
+        return "Brecha de liderazgo en mi institución: " + w + "% de la plantilla son mujeres, " + l +
+               "% de los cargos de conducción. Una brecha de " + gap + " puntos." +
+               (need > 0 ? " Cerrarla: " + need + " mujeres más en conducción." : "") +
+               " Calculado en https://emiliacaro.com/tools/brecha.html";
+      }
+    }
+  };
+
+  function lang() { return window.siteLang === 'es' ? 'es' : 'en'; }
+  function $(id) { return document.getElementById(id); }
+
+  var fields = ['cTotal', 'cPct', 'cLead', 'cLeadW'].map($);
+  var state = null;   // último cálculo válido, para poder redibujar al cambiar idioma
+
+  function compute() {
+    var total  = parseFloat($('cTotal').value);
+    var pct    = parseFloat($('cPct').value);
+    var lead   = parseFloat($('cLead').value);
+    var leadW  = parseFloat($('cLeadW').value);
+
+    var valid = !isNaN(total) && total > 0 &&
+                !isNaN(pct) && pct >= 0 && pct <= 100 &&
+                !isNaN(lead) && lead > 0 &&
+                !isNaN(leadW) && leadW >= 0 && leadW <= lead;
+
+    if (!valid) {
+      state = null;
+      $('cEmpty').style.display = '';
+      $('cResult').style.display = 'none';
+      return;
+    }
+
+    var workShare = pct;
+    var leadShare = (leadW / lead) * 100;
+    var gap = workShare - leadShare;
+    // cuántas mujeres más harían falta para que la conducción refleje la plantilla
+    var target = Math.round(lead * (pct / 100));
+    var need = Math.max(0, target - leadW);
+
+    state = { workShare: workShare, leadShare: leadShare, gap: gap, need: need };
+    render();
+  }
+
+  function render() {
+    if (!state) return;
+    var L = lang();
+    var s = state;
+    var gapRounded = Math.round(s.gap);
+
+    $('cEmpty').style.display = 'none';
+    $('cResult').style.display = '';
+
+    $('bWork').textContent = Math.round(s.workShare) + '%';
+    $('bLead').textContent = Math.round(s.leadShare) + '%';
+    $('barWork').style.width = Math.max(0, Math.min(100, s.workShare)) + '%';
+    $('barLead').style.width = Math.max(0, Math.min(100, s.leadShare)) + '%';
+
+    $('gapNum').textContent = gapRounded >= 0 ? gapRounded : '+' + Math.abs(gapRounded);
+    $('gapLabel').textContent = gapRounded >= 0 ? T.gapLabel[L] : T.gapLabelNeg[L];
+
+    var read = T.reads.find(function (r) { return gapRounded <= r.max; });
+    var text = read[L];
+    if (s.need > 0) text += ' ' + T.needed[L](s.need);
+    $('gapRead').textContent = text;
+
+    $('gapBench').textContent = T.bench[L](gapRounded);
+    $('cCopy').textContent = T.copy[L];
+  }
+
+  fields.forEach(function (f) { f.addEventListener('input', compute); });
+
+  $('cReset').addEventListener('click', function () {
+    fields.forEach(function (f) { f.value = ''; });
+    compute();
+  });
+
+  $('cCopy').addEventListener('click', function () {
+    if (!state) return;
+    var L = lang();
+    var btn = this;
+    var text = T.summary[L](
+      Math.round(state.workShare),
+      Math.round(state.leadShare),
+      Math.round(state.gap),
+      state.need
+    );
+    var done = function () {
+      btn.textContent = T.copied[L];
+      setTimeout(function () { btn.textContent = T.copy[L]; }, 2200);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(done);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  });
+
+  document.addEventListener('langchange', render);
+})();
+</script>
+</body>
+</html>
