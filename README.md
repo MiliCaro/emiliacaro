@@ -18,7 +18,6 @@ Estructura editorial inspirada en juliaismael.com.ar, con la paleta propia. Un f
 
 Tipografía: **Playfair Display** (títulos; la palabra clave va en `<em>` y sale en itálica roja), **Nunito Sans** (cuerpo, etiquetas en mayúsculas con `letter-spacing` amplio, botones).
 
-Firma visual: el globo de líneas detrás del retrato, con Argentina como nodo de origen.
 
 Todos los tokens viven en `:root` al inicio de `styles.css`. Cambiar un color ahí lo cambia en todo el sitio, incluidas las notas y las herramientas.
 
@@ -54,21 +53,19 @@ Las respuestas se guardan de forma anónima en una planilla de Google Sheets. Si
 - La URL de la aplicación web se pega en `SHEETS_URL`, al principio de `script.js`. Si queda vacía, no se envía nada.
 - **Quiz:** se guarda una fila al terminar, con el puntaje y la opción elegida en cada pregunta (✓ o ✗).
 - **Calculadora:** se guarda una fila cuando la persona deja de tipear, con los cuatro números y la brecha resultante.
-- Si se cambian las preguntas del quiz, actualizar los encabezados `P1`…`P9` en el script de la planilla.
+- Si se cambian las preguntas del quiz, actualizar los encabezados `P1`…`P8` en el script de la planilla.
 
-## Pendientes antes de publicar
+## Pendientes
 
-1. **Verificar las cifras de "La brecha, en números" y del quiz** contra las fuentes originales. Vienen de las notas de Infobae y están marcadas con un comentario en `index.html`. Las más sensibles a citarse mal son el retorno de USD 4,30 por dólar en prevención y el 3% del PBI
-2. **Cáncer de cuello uterino en "Mirada"**: la brecha entre provincias sale del INC (Mortalidad por cáncer en Argentina 2022: 17,3 vs 4,4 por 100.000). Falta confirmar con fuente la comparación con la OCDE y con países de ingresos bajos y altos (por ejemplo, GLOBOCAN)
+Las cifras se verificaron contra sus fuentes (septiembre 2026). Las oficiales (INC, INDEC, Estadísticas Vitales) coinciden; las de Infobae se reescribieron para decir exactamente lo que dice la nota. Quedan sin fuente primaria:
 
-## Publicar en GitHub Pages
+1. **7 a 10 años para diagnosticar endometriosis**: es una declaración propia en Infobae 2026; conviene reemplazarla por la fuente original
+2. **57% (quiz, pregunta 8)**: se reformuló según la OPS (Houghton y otros, *Rev Panam Salud Publica* 2022): 56,7% de mujeres de 8 países de América Latina no consigue dinero para la consulta o el tratamiento. No es "barreras de acceso" en general
+3. **USD 4,30 por dólar**: es solo para prevención del embarazo adolescente (UNFPA); así está redactado en el quiz
 
-1. Subí los archivos a la raíz del repo
-2. Repo → **Settings** → **Pages**
-3. *Build and deployment*: **Source: Deploy from a branch**, **Branch: `main` / `root`**, **Save**
+## Publicar
 
-### Dominio propio
-En **Settings → Pages → Custom domain** poné `emiliacaro.com` y configurá los DNS que muestra GitHub. Se agrega un archivo `CNAME` solo.
+El sitio está en **Vercel**, conectado a este repositorio: todo lo que entra a `main` se publica solo en emiliacaro.com en menos de un minuto. El dominio se gestiona en GoDaddy y apunta a Vercel.
 
 ## Ver en local
 

@@ -16,10 +16,10 @@
  */
 
 var ENCABEZADOS = {
-  Quiz: ['Fecha', 'Idioma', 'Puntaje (de 9)',
+  Quiz: ['Fecha', 'Idioma', 'Puntaje (de 8)',
          'P1 Causa de muerte', 'P2 % fuerza laboral', 'P3 % conducción',
          'P4 Endometriosis', 'P5 Años enfermas', 'P6 Lugar de la salud',
-         'P7 Retorno prevención', 'P8 Barreras de acceso', 'P9 % del PBI'],
+         'P7 Retorno prevención', 'P8 Barreras de acceso'],
   Calculadora: ['Fecha', 'Idioma', 'Personal total', '% mujeres en la plantilla',
                 'Cargos de conducción', 'Ocupados por mujeres',
                 '% mujeres en conducción', 'Brecha (puntos)', 'Mujeres que faltan en conducción']
@@ -56,9 +56,9 @@ function validar(d) {
 
   if (d.tipo === 'quiz') {
     var r = d.respuestas;
-    if (!Array.isArray(r) || r.length !== 9) return null;
+    if (!Array.isArray(r) || r.length !== 8) return null;
     var celdas = [];
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 8; i++) {
       var x = r[i];
       if (!x || ['A', 'B', 'C'].indexOf(x.opcion) === -1 || typeof x.ok !== 'boolean') return null;
       celdas.push(x.opcion + (x.ok ? ' ✓' : ' ✗'));
