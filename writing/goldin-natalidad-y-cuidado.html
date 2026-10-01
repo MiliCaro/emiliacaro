@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:url" content="https://emiliacaro.com/writing/goldin-natalidad-y-cuidado.html">
 <meta property="og:image" content="https://emiliacaro.com/portrait.jpg">
@@ -59,7 +59,7 @@
 <!-- ============ NAV ============ -->
 <header class="nav">
  <div class="nav-inner">
- <a href="../index.html#top" class="nav-name">Emilia Caro</a>
+ <a href="../index.html#top" class="nav-name"><span class="nn">Emilia Caro</span><span class="ns" data-en="Health systems · Governance" data-es="Sistemas de salud · Gobernanza">Health systems · Governance</span></a>
  <nav class="nav-links" aria-label="Primary">
  <a href="../index.html#bio" data-en="Bio" data-es="Bio">Bio</a>
  <a href="../index.html#work" data-en="Work" data-es="Áreas">Work</a>
@@ -71,7 +71,7 @@
  </nav>
  <div class="nav-right">
  <button class="lang" id="langToggle" aria-label="Switch language">
- <span data-lang="en" class="on">EN</span><span class="slash">/</span><span data-lang="es">ES</span>
+ <span data-lang="en">EN</span><span class="slash">|</span><span data-lang="es" class="on">ES</span>
  </button>
  <button class="burger" id="burger" aria-label="Menu">☰</button>
  </div>
@@ -330,14 +330,20 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
- <div class="wrap footer-inner">
- <span class="footer-name">Emilia Caro</span>
- <span class="footer-links">
- <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener">LinkedIn</a>
- <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener">Instagram</a>
- </span>
- <span class="footer-year">© <span id="year"></span></span>
- </div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="footer-name">Emilia Caro</span>
+      <span class="footer-sub" data-en="Health systems · Governance" data-es="Sistemas de salud · Gobernanza">Health systems · Governance</span>
+    </div>
+    <div>
+      <p class="footer-h" data-en="Follow" data-es="Seguime">Follow</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+        <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".7" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bot">© <span id="year"></span> Emilia Caro</div>
 </footer>
 
 <script src="../script.js"></script>

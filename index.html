@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,14 +61,14 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="nav-name">Emilia Caro</a>
+    <a href="#top" class="nav-name"><span class="nn">Emilia Caro</span><span class="ns" data-en="Health systems · Governance" data-es="Sistemas de salud · Gobernanza">Health systems · Governance</span></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#bio"      data-en="Bio"       data-es="Bio">Bio</a>
       <a href="#work"     data-en="Work"      data-es="Áreas">Work</a>
@@ -80,7 +80,7 @@
     </nav>
     <div class="nav-right">
       <button class="lang" id="langToggle" aria-label="Switch language">
-        <span data-lang="en" class="on">EN</span><span class="slash">/</span><span data-lang="es">ES</span>
+        <span data-lang="en">EN</span><span class="slash">|</span><span data-lang="es" class="on">ES</span>
       </button>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
@@ -100,236 +100,254 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
-    <div class="hero-text">
-      <p class="eyebrow reveal" data-en="Health systems · Governance" data-es="Sistemas de salud · Gobernanza">Health systems · Governance</p>
-      <h1 class="reveal d1">Emilia<br><em>Caro</em></h1>
-      <p class="positioning reveal d2"
-         data-en="Works on the governance and transformation of health systems, treating them as social infrastructure that demands leadership, judgement and equity."
-         data-es="Trabaja en la gobernanza y transformación de los sistemas de salud, pensándolos como infraestructura social que requiere conducción, criterio y equidad.">
-        Works on the governance and transformation of health systems, treating them as social infrastructure that demands leadership, judgement and equity.
-      </p>
-      <p class="titles reveal d3">
-        <span data-en="Global Chair, Women in Global Health" data-es="Global Chair, Women in Global Health">Global Chair, Women in Global Health</span><br>
-        <span data-en="President, Women in Global Health Argentina" data-es="Presidenta, Women in Global Health Argentina">President, Women in Global Health Argentina</span><br>
-        <span data-en="Executive Director, Fundación GEDYT" data-es="Directora Ejecutiva, Fundación GEDYT">Executive Director, Fundación GEDYT</span><br>
-        <span data-en="Board Member, GEDYT" data-es="Miembro del Board, GEDYT">Board Member, GEDYT</span>
-      </p>
-      <div class="hero-cta reveal d4">
-        <a href="#tools" class="btn-p" data-en="Test what you know" data-es="Probá lo que sabés">Test what you know</a>
-        <a href="#contact" class="btn-s" data-en="Get in touch" data-es="Contacto">Get in touch</a>
+    <!-- globo de líneas: red global de trabajo, con Argentina como nodo de origen -->
+    <div class="hero-globe" aria-hidden="true">
+      <svg viewBox="0 0 600 600">
+        <g fill="none" stroke="#051926" stroke-width="1" opacity=".13">
+          <circle cx="300" cy="300" r="250"/>
+          <ellipse cx="300" cy="300" rx="216" ry="250"/>
+          <ellipse cx="300" cy="300" rx="125" ry="250"/>
+          <path d="M300 50v500"/>
+          <path d="M50 300h500M84 175h432M84 425h432M175 84h250M175 516h250"/>
+        </g>
+        <g fill="none" stroke="#D95749" stroke-width="1.2" opacity=".55">
+          <path d="M228 440Q250 290 335 150"/>
+          <path d="M228 440Q350 360 470 262"/>
+          <path d="M228 440Q150 350 150 232"/>
+          <path d="M228 440Q330 470 420 420"/>
+        </g>
+        <g fill="#D95749" opacity=".85">
+          <circle cx="228" cy="440" r="5"/>
+          <circle cx="335" cy="150" r="3.2"/>
+          <circle cx="470" cy="262" r="3.2"/>
+          <circle cx="150" cy="232" r="3.2"/>
+          <circle cx="420" cy="420" r="3.2"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Emilia Caro</p>
+        <h1 class="reveal d1"
+            data-en="Your postcode matters more than <em>your genetic code</em>."
+            data-es="El código postal pesa más que <em>el código genético</em>.">Your postcode matters more than <em>your genetic code</em>.</h1>
+        <span class="rule reveal d2"></span>
+        <p class="lead reveal d2"
+           data-en="Works on the governance and transformation of health systems, treating them as social infrastructure that demands leadership, judgement and equity."
+           data-es="Trabaja en la gobernanza y transformación de los sistemas de salud, pensándolos como infraestructura social que requiere conducción, criterio y equidad.">Works on the governance and transformation of health systems, treating them as social infrastructure that demands leadership, judgement and equity.</p>
+        <div class="hero-cta reveal d3">
+          <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener" class="btn-p"
+             data-en="Full career on LinkedIn &rarr;" data-es="Trayectoria completa en LinkedIn &rarr;">Full career on LinkedIn &rarr;</a>
+          <a href="#contact" class="btn-s" data-en="Get in touch" data-es="Contacto">Get in touch</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-portrait">
-      <img src="portrait.jpg" alt="Emilia Caro, Global Chair de Women in Global Health y referente en salud de la mujer" class="portrait-img" width="1500" height="2101">
-    </div>
-  </section>
 
-  <!-- ============ TICKER ============ -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span data-en="Health governance" data-es="Gobernanza en salud">Health governance</span>
-      <span data-en="Women's health" data-es="Salud de la mujer">Women's health</span>
-      <span data-en="Systems transformation" data-es="Transformación de sistemas">Systems transformation</span>
-      <span data-en="Leadership in decision spaces" data-es="Liderazgo en espacios de decisión">Leadership in decision spaces</span>
-      <span data-en="Structural equity" data-es="Equidad estructural">Structural equity</span>
-      <span data-en="Innovation, data and health" data-es="Innovación, datos y salud">Innovation, data and health</span>
-      <span data-en="Health governance" data-es="Gobernanza en salud">Health governance</span>
-      <span data-en="Women's health" data-es="Salud de la mujer">Women's health</span>
-      <span data-en="Systems transformation" data-es="Transformación de sistemas">Systems transformation</span>
-      <span data-en="Leadership in decision spaces" data-es="Liderazgo en espacios de decisión">Leadership in decision spaces</span>
-      <span data-en="Structural equity" data-es="Equidad estructural">Structural equity</span>
-      <span data-en="Innovation, data and health" data-es="Innovación, datos y salud">Innovation, data and health</span>
-    </div>
-  </div>
-
-  <!-- ============ STATS BAND ============ -->
-  <!-- VERIFICAR antes de publicar: estos números vienen de las notas de Infobae.
-       Contrastar cada cifra contra la fuente original antes de dejarlos online. -->
-  <section class="stats-band" id="stats">
-    <div class="wrap">
-      <p class="stats-head reveal"
-         data-en="The gap, in numbers" data-es="La brecha, en números">The gap, in numbers</p>
-      <div class="stats-grid">
-        <div class="stat reveal">
-          <span class="figure" data-count="70">70<span class="unit">%</span></span>
-          <span class="stat-label"
-                data-en="of the health workforce in Argentina are women"
-                data-es="de la fuerza laboral en salud en Argentina son mujeres">of the health workforce in Argentina are women</span>
-          <span class="stat-src">Infobae · 2024</span>
-        </div>
-        <div class="stat reveal d1">
-          <span class="figure" data-count="25" data-prefix="&lt;">&lt;25<span class="unit">%</span></span>
-          <span class="stat-label"
-                data-en="reach positions where decisions are actually made"
-                data-es="llega a las posiciones donde se toman las decisiones">reach positions where decisions are actually made</span>
-          <span class="stat-src">Infobae · 2026</span>
-        </div>
-        <div class="stat reveal d2">
-          <span class="figure" data-count="10" data-prefix="7–">7–10<span class="unit" data-en="yrs" data-es="años">yrs</span></span>
-          <span class="stat-label"
-                data-en="to diagnose endometriosis in Latin America"
-                data-es="para diagnosticar endometriosis en América Latina">to diagnose endometriosis in Latin America</span>
-          <span class="stat-src">Infobae · 2026</span>
-        </div>
-        <div class="stat reveal d3">
-          <span class="figure" data-count="3">3<span class="unit">%</span></span>
-          <span class="stat-label"
-                data-en="of national GDP is affected by women's health"
-                data-es="del PBI está afectado por la salud de las mujeres">of national GDP is affected by women's health</span>
-          <span class="stat-src">Infobae · 2026</span>
-        </div>
+      <div class="hero-photo reveal d1">
+        <img src="portrait.jpg" alt="Emilia Caro, Global Chair de Women in Global Health y referente en salud de la mujer" class="portrait-img" width="1500" height="2101">
+        <p class="photo-cap">
+          <span class="pc-t">Global Chair</span>
+          <span class="pc-s">Women in Global Health</span>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ BIO ============ -->
-  <section class="block" id="bio">
+  <!-- ============ MIRADA (desigualdad como causa de muerte) ============ -->
+  <section class="manifesto" id="perspective">
     <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">01</span><span data-en="Bio" data-es="Bio">Bio</span></p>
-        <h2 class="section-title" data-en="A career across science and policy" data-es="Una trayectoria entre la ciencia y la política">A career across science and policy</h2>
+      <p class="sec-eye reveal" data-en="Perspective" data-es="Mirada">Perspective</p>
+      <p class="mf-lead reveal d1"
+         data-en="Inequality is not a social issue that affects health: it is <em>a cause of death, measurable and avoidable</em>."
+         data-es="La desigualdad no es un tema social que afecta la salud: es <em>una causa de muerte, medible y evitable</em>.">Inequality is not a social issue that affects health: it is <em>a cause of death, measurable and avoidable</em>.</p>
+      <div class="mf-grid reveal d2">
+        <!-- Base: Instituto Nacional del Cáncer, Mortalidad por cáncer en Argentina 2022
+             (cuello uterino: 17,3 por 100.000 en la provincia más alta vs 4,4 en CABA).
+             VERIFICAR la comparación con la OCDE y con países de ingresos bajos/altos. -->
+        <div class="mf-item">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.6-6-6.6-11a6.6 6.6 0 0 1 13.2 0c0 5-6.6 11-6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+          <div>
+            <span class="mf-tag" data-en="Cervical cancer" data-es="Cáncer de cuello uterino">Cervical cancer</span>
+            <p data-en="The gap between Argentina's provinces is wider than the gap between the country and the OECD. Some provinces have figures like low-income countries; others, like high-income ones. That is not biology: <em>it is organization</em>."
+               data-es="La distancia entre las provincias argentinas es mayor que la que separa al país de la OCDE. Hay provincias con cifras de países de bajos ingresos y otras con cifras de países de altos ingresos. Eso no es biología: <em>es organización</em>.">The gap between Argentina's provinces is wider than the gap between the country and the OECD. Some provinces have figures like low-income countries; others, like high-income ones. That is not biology: <em>it is organization</em>.</p>
+          </div>
+        </div>
+        <div class="mf-item">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 4.6 6v5.4c0 4.6 3.1 8 7.4 9.4 4.3-1.4 7.4-4.8 7.4-9.4V6z"/><path d="m8.8 12.2 2.2 2.2 4.2-4.4"/></svg></span>
+          <p data-en="Prevention is <em>the cheapest equity policy there is</em>."
+             data-es="La prevención es <em>la política de equidad más barata que existe</em>.">Prevention is <em>the cheapest equity policy there is</em>.</p>
+        </div>
       </div>
-      <div class="col-right reveal d1">
+    </div>
+  </section>
+
+  <!-- ============ ÁREAS ============ -->
+  <section class="areas" id="work">
+    <div class="wrap">
+      <div class="areas-head reveal">
+        <p class="sec-eye" data-en="Areas of work" data-es="Áreas de trabajo">Areas of work</p>
+        <h2 class="sec-t" data-en="Territories of thought <em>and influence</em>" data-es="Territorios de pensamiento <em>e incidencia</em>">Territories of thought <em>and influence</em></h2>
+      </div>
+      <div class="agrid reveal d1">
+        <article class="acard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3.4 8h17.2z"/><path d="M5.8 10.6v7M9.9 10.6v7M14.1 10.6v7M18.2 10.6v7M3.4 20.4h17.2"/></svg></span>
+          <h3 data-en="Health governance" data-es="Gobernanza en salud">Health governance</h3>
+          <p data-en="How health systems are steered: who decides, with what criteria, and how authority and accountability are distributed across institutions."
+             data-es="Cómo se conducen los sistemas de salud: quién decide, con qué criterios, y cómo se distribuyen la autoridad y la rendición de cuentas entre las instituciones.">How health systems are steered: who decides, with what criteria, and how authority and accountability are distributed across institutions.</p>
+        </article>
+        <article class="acard">
+          <span class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 12a7.6 7.6 0 0 1-13.1 5.2M4.4 12a7.6 7.6 0 0 1 13.1-5.2"/><path d="M17.7 3.3v3.6h-3.6M6.3 20.7v-3.6h3.6"/></svg></span>
+          <h3 data-en="Systems transformation" data-es="Transformación de sistemas">Systems transformation</h3>
+          <p data-en="Health understood as social infrastructure: designed, sustained and reformed with the same seriousness as any system a society depends on."
+             data-es="La salud entendida como infraestructura social: diseñada, sostenida y reformada con la misma seriedad que cualquier sistema del que depende una sociedad.">Health understood as social infrastructure: designed, sustained and reformed with the same seriousness as any system a society depends on.</p>
+        </article>
+        <article class="acard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.6" r="2.8"/><path d="M7.4 12.6a5 5 0 0 1 9.2 0"/><path d="M3.4 15.4h17.2M6.4 15.4v5M17.6 15.4v5"/></svg></span>
+          <h3 data-en="Leadership in decision spaces" data-es="Liderazgo en espacios de decisión">Leadership in decision spaces</h3>
+          <p data-en="Who sits at the tables where health is decided, and what changes when those tables reflect the populations they serve."
+             data-es="Quién ocupa las mesas donde se decide la salud, y qué cambia cuando esas mesas reflejan a las poblaciones a las que sirven.">Who sits at the tables where health is decided, and what changes when those tables reflect the populations they serve.</p>
+        </article>
+        <article class="acard">
+          <span class="ico red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 20.4h16.8"/><path d="M6.8 20.4v-5.6M10.6 20.4V10M14.4 20.4v-7.4M18.2 20.4V5.2"/><path d="M5.6 9.4 10.2 5.8l3.6 2.6 4.6-4.6"/></svg></span>
+          <h3 data-en="Innovation, data and health" data-es="Innovación, datos y salud">Innovation, data and health</h3>
+          <p data-en="The conditions under which new tools and evidence actually improve care, rather than adding complexity to systems already under strain."
+             data-es="Las condiciones bajo las cuales las nuevas herramientas y la evidencia mejoran realmente la atención, en lugar de sumar complejidad a sistemas ya tensionados.">The conditions under which new tools and evidence actually improve care, rather than adding complexity to systems already under strain.</p>
+        </article>
+        <article class="acard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6v16.8M8 20.4h8M5 7h14"/><path d="M5 7 2.6 13a2.4 2.4 0 0 0 4.8 0z"/><path d="M19 7l-2.4 6a2.4 2.4 0 0 0 4.8 0z"/></svg></span>
+          <h3 data-en="Structural equity in health" data-es="Equidad estructural en salud">Structural equity in health</h3>
+          <p data-en="Equity treated as a design property of systems, not an aspiration: built into how access, financing and governance are structured."
+             data-es="La equidad tratada como una propiedad de diseño de los sistemas, no como una aspiración: incorporada en cómo se estructuran el acceso, el financiamiento y la gobernanza.">Equity treated as a design property of systems, not an aspiration: built into how access, financing and governance are structured.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BIO + ALCANCE (bloque partido) ============ -->
+  <section class="split" id="bio">
+    <div class="sp-l">
+      <div class="sp-in reveal">
+        <p class="sec-eye" data-en="Bio" data-es="Bio">Bio</p>
+        <h2 class="sec-t" data-en="A career across <em>science and policy</em>" data-es="Una trayectoria entre <em>la ciencia y la política</em>">A career across <em>science and policy</em></h2>
         <div class="bio-body">
           <p data-en="Emilia Caro works at the intersection of science, management and public policy in health. Trained in molecular biology and human genetics, with an MBA in health management, she has spent over two decades in the governance and transformation of health systems."
-             data-es="Emilia Caro trabaja en la intersección de la ciencia, la gestión y la política pública en salud. Formada en biología molecular y genética humana, con un MBA en gestión de salud, ha dedicado más de dos décadas a la gobernanza y transformación de los sistemas de salud.">
-            Emilia Caro works at the intersection of science, management and public policy in health. Trained in molecular biology and human genetics, with an MBA in health management, she has spent over two decades in the governance and transformation of health systems.
-          </p>
+             data-es="Emilia Caro trabaja en la intersección de la ciencia, la gestión y la política pública en salud. Formada en biología molecular y genética humana, con un MBA en gestión de salud, ha dedicado más de dos décadas a la gobernanza y transformación de los sistemas de salud.">Emilia Caro works at the intersection of science, management and public policy in health. Trained in molecular biology and human genetics, with an MBA in health management, she has spent over two decades in the governance and transformation of health systems.</p>
           <p data-en="She serves as Global Chair of Women in Global Health, President of its Argentine chapter, and Executive Director of Fundación GEDYT. Her work spans health equity, the design of care models, and the strengthening of institutions that decide how health is governed."
-             data-es="Es Global Chair de Women in Global Health, Presidenta de su capítulo argentino, y Directora Ejecutiva de Fundación GEDYT. Su trabajo abarca la equidad en salud, el diseño de modelos de atención y el fortalecimiento de las instituciones que deciden cómo se gobierna la salud.">
-            She serves as Global Chair of Women in Global Health, President of its Argentine chapter, and Executive Director of Fundación GEDYT. Her work spans health equity, the design of care models, and the strengthening of institutions that decide how health is governed.
-          </p>
+             data-es="Es Global Chair de Women in Global Health, Presidenta de su capítulo argentino, y Directora Ejecutiva de Fundación GEDYT. Su trabajo abarca la equidad en salud, el diseño de modelos de atención y el fortalecimiento de las instituciones que deciden cómo se gobierna la salud.">She serves as Global Chair of Women in Global Health, President of its Argentine chapter, and Executive Director of Fundación GEDYT. Her work spans health equity, the design of care models, and the strengthening of institutions that decide how health is governed.</p>
         </div>
-        <a href="#" class="quiet-link" data-en="Download short bio (PDF)" data-es="Descargar bio breve (PDF)">Download short bio (PDF)</a>
+        <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener" class="quiet-link"
+           data-en="Full career on LinkedIn" data-es="Trayectoria completa en LinkedIn">Full career on LinkedIn</a>
       </div>
     </div>
-  </section>
 
-  <!-- ============ AREAS, DARK ============ -->
-  <section class="block dark" id="work">
-    <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">02</span><span data-en="Areas of work" data-es="Áreas de trabajo">Areas of work</span></p>
-        <h2 class="section-title" data-en="Territories of thought and influence" data-es="Territorios de pensamiento e incidencia">Territories of thought and influence</h2>
-      </div>
-      <div class="col-right reveal d1">
-        <div class="areas">
-          <article class="area">
-            <span class="a-num">/01</span>
-            <div>
-              <h3 data-en="Health governance" data-es="Gobernanza en salud">Health governance</h3>
-              <p data-en="How health systems are steered: who decides, with what criteria, and how authority and accountability are distributed across institutions."
-                 data-es="Cómo se conducen los sistemas de salud: quién decide, con qué criterios, y cómo se distribuyen la autoridad y la rendición de cuentas entre las instituciones.">How health systems are steered: who decides, with what criteria, and how authority and accountability are distributed across institutions.</p>
-            </div>
-          </article>
-          <article class="area">
-            <span class="a-num">/02</span>
-            <div>
-              <h3 data-en="Systems transformation" data-es="Transformación de sistemas">Systems transformation</h3>
-              <p data-en="Health understood as social infrastructure: designed, sustained and reformed with the same seriousness as any system a society depends on."
-                 data-es="La salud entendida como infraestructura social: diseñada, sostenida y reformada con la misma seriedad que cualquier sistema del que depende una sociedad.">Health understood as social infrastructure: designed, sustained and reformed with the same seriousness as any system a society depends on.</p>
-            </div>
-          </article>
-          <article class="area">
-            <span class="a-num">/03</span>
-            <div>
-              <h3 data-en="Leadership in decision spaces" data-es="Liderazgo en espacios de decisión">Leadership in decision spaces</h3>
-              <p data-en="Who sits at the tables where health is decided, and what changes when those tables reflect the populations they serve."
-                 data-es="Quién ocupa las mesas donde se decide la salud, y qué cambia cuando esas mesas reflejan a las poblaciones a las que sirven.">Who sits at the tables where health is decided, and what changes when those tables reflect the populations they serve.</p>
-            </div>
-          </article>
-          <article class="area">
-            <span class="a-num">/04</span>
-            <div>
-              <h3 data-en="Innovation, data and health" data-es="Innovación, datos y salud">Innovation, data and health</h3>
-              <p data-en="The conditions under which new tools and evidence actually improve care, rather than adding complexity to systems already under strain."
-                 data-es="Las condiciones bajo las cuales las nuevas herramientas y la evidencia mejoran realmente la atención, en lugar de sumar complejidad a sistemas ya tensionados.">The conditions under which new tools and evidence actually improve care, rather than adding complexity to systems already under strain.</p>
-            </div>
-          </article>
-          <article class="area">
-            <span class="a-num">/05</span>
-            <div>
-              <h3 data-en="Structural equity in health" data-es="Equidad estructural en salud">Structural equity in health</h3>
-              <p data-en="Equity treated as a design property of systems, not an aspiration: built into how access, financing and governance are structured."
-                 data-es="La equidad tratada como una propiedad de diseño de los sistemas, no como una aspiración: incorporada en cómo se estructuran el acceso, el financiamiento y la gobernanza.">Equity treated as a design property of systems, not an aspiration: built into how access, financing and governance are structured.</p>
-            </div>
-          </article>
+    <div class="sp-r">
+      <div class="sp-in reveal d1">
+        <p class="stats-head" data-en="From the global table to the territory" data-es="De la mesa global al territorio">From the global table to the territory</p>
+        <div class="reach">
+          <div class="reach-row">
+            <span class="figure" data-count="68">68<span class="unit">+</span></span>
+            <span class="stat-label"
+                  data-en="countries she works with"
+                  data-es="países con los que trabaja">countries she works with</span>
+          </div>
+          <div class="reach-row">
+            <span class="figure" data-count="100">100<span class="unit">+</span></span>
+            <span class="stat-label"
+                  data-en="organizations in the consortium for colorectal cancer prevention and early detection she leads in Argentina"
+                  data-es="organizaciones en el consorcio por la prevención y detección temprana del cáncer colorrectal que lidera en Argentina">organizations in the consortium for colorectal cancer prevention and early detection she leads in Argentina</span>
+          </div>
+          <div class="reach-row">
+            <span class="figure" data-count="15">15</span>
+            <span class="stat-label"
+                  data-en="organizations in the Alliance for Women's Health in Argentina, driven by the organization she leads"
+                  data-es="organizaciones en la Alianza por la Salud de la Mujer en Argentina, impulsada por la organización que lidera">organizations in the Alliance for Women's Health in Argentina, driven by the organization she leads</span>
+          </div>
         </div>
+        <p class="reach-note">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 12h5.2M15.4 12h5.2"/><circle cx="12" cy="12" r="3.4"/><path d="M3.4 8.4v7.2M20.6 8.4v7.2"/></svg></span>
+          <span data-en="Public–private collaboration: bringing governments, industry and civil society to the same table."
+                data-es="Articulación público-privada: gobiernos, industria y sociedad civil en la misma mesa.">Public–private collaboration: bringing governments, industry and civil society to the same table.</span>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ POSITIONS ============ -->
-  <section class="block" id="positions">
+  <!-- ============ POSICIONES ============ -->
+  <section class="positions-sec" id="positions">
     <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">03</span><span data-en="Positions" data-es="Posiciones">Positions</span></p>
-        <h2 class="section-title" data-en="Current institutional roles" data-es="Roles institucionales actuales">Current institutional roles</h2>
-      </div>
-      <div class="col-right reveal d1">
-        <ul class="positions">
-          <li>
-            <span class="pos-role" data-en="Global Chair" data-es="Global Chair">Global Chair</span>
-            <span class="pos-org">Women in Global Health</span>
-          </li>
-          <li>
-            <span class="pos-role" data-en="President" data-es="Presidenta">President</span>
-            <span class="pos-org">Women in Global Health Argentina</span>
-          </li>
-          <li>
-            <span class="pos-role" data-en="Executive Director" data-es="Directora Ejecutiva">Executive Director</span>
-            <span class="pos-org">Fundación GEDYT</span>
-          </li>
-          <li>
-            <span class="pos-role" data-en="Board Member" data-es="Miembro del Board">Board Member</span>
-            <span class="pos-org">GEDYT</span>
-          </li>
-        </ul>
-      </div>
+      <p class="sec-eye reveal" data-en="Current institutional roles" data-es="Roles institucionales actuales">Current institutional roles</p>
+      <ul class="positions reveal d1">
+        <li>
+          <span class="pos-role" data-en="Global Chair" data-es="Global Chair">Global Chair</span>
+          <span class="pos-org">Women in Global Health</span>
+        </li>
+        <li>
+          <span class="pos-role" data-en="President" data-es="Presidenta">President</span>
+          <span class="pos-org">Women in Global Health Argentina</span>
+        </li>
+        <li>
+          <span class="pos-role" data-en="Executive Director" data-es="Directora Ejecutiva">Executive Director</span>
+          <span class="pos-org">Fundación GEDYT</span>
+        </li>
+        <li>
+          <span class="pos-role" data-en="Board Member" data-es="Miembro del Board">Board Member</span>
+          <span class="pos-org">GEDYT</span>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============ SPEAKING ============ -->
+  <!-- ============ CONFERENCIAS ============ -->
   <section class="block" id="speaking">
-    <div class="wrap">
+    <div class="wrap two-col">
       <div class="col-left reveal">
-        <p class="kicker"><span class="num">04</span><span data-en="Speaking" data-es="Conferencias">Speaking</span></p>
-        <h2 class="section-title" data-en="Public engagement" data-es="Participación pública">Public engagement</h2>
-      </div>
-      <div class="col-right reveal d1">
-        <p class="section-intro"
+        <p class="sec-eye" data-en="Speaking" data-es="Conferencias">Speaking</p>
+        <h2 class="sec-t" data-en="Public <em>engagement</em>" data-es="Participación <em>pública</em>">Public <em>engagement</em></h2>
+        <p class="sec-intro"
            data-en="A selection of conferences, panels and publications. Updated periodically."
            data-es="Una selección de conferencias, paneles y publicaciones. Se actualiza periódicamente.">A selection of conferences, panels and publications. Updated periodically.</p>
+      </div>
+      <div class="reveal d1">
         <ul class="speaking-list">
-          <li data-keep="yes"><span class="sp-year">2026</span><span class="sp-desc" data-en="World Committee on Colorectal Cancer, Chicago" data-es="World Committee on Colorectal Cancer, Chicago">World Committee on Colorectal Cancer, Chicago</span></li>
+          <li><span class="sp-year">2026</span><span class="sp-desc" data-en="World Committee on Colorectal Cancer, Chicago" data-es="World Committee on Colorectal Cancer, Chicago">World Committee on Colorectal Cancer, Chicago</span></li>
           <li><span class="sp-year">2026</span><span class="sp-desc" data-en="Global Women Leaders Dialogue, Invited participant" data-es="Global Women Leaders Dialogue, Participante invitada">Global Women Leaders Dialogue, Invited participant</span></li>
-          <li data-keep="yes"><span class="sp-year">2025</span><span class="sp-desc" data-en="UN General Assembly 80, Women in Global Health, New York" data-es="Asamblea General de la ONU 80, Women in Global Health, Nueva York">UN General Assembly 80, Women in Global Health, New York</span></li>
+          <li><span class="sp-year">2025</span><span class="sp-desc" data-en="UN General Assembly 80, Women in Global Health, New York" data-es="Asamblea General de la ONU 80, Women in Global Health, Nueva York">UN General Assembly 80, Women in Global Health, New York</span></li>
           <li><span class="sp-year">2025</span><span class="sp-desc" data-en="WGH Argentina &amp; Elea / MSI, Webinar series" data-es="WGH Argentina y Elea / MSI, Serie de webinars">WGH Argentina &amp; Elea / MSI, Webinar series</span></li>
-          <li data-keep="yes"><span class="sp-year">2025</span><span class="sp-desc" data-en="HTAi Annual Meeting, Plenary, Buenos Aires" data-es="HTAi Annual Meeting, Plenaria, Buenos Aires">HTAi Annual Meeting, Plenary, Buenos Aires</span></li>
+          <li><span class="sp-year">2025</span><span class="sp-desc" data-en="HTAi Annual Meeting, Plenary, Buenos Aires" data-es="HTAi Annual Meeting, Plenaria, Buenos Aires">HTAi Annual Meeting, Plenary, Buenos Aires</span></li>
           <li><span class="sp-year">2025</span><span class="sp-desc" data-en="World Committee on Colorectal Cancer, San Diego" data-es="World Committee on Colorectal Cancer, San Diego">World Committee on Colorectal Cancer, San Diego</span></li>
           <li><span class="sp-year">2025</span><span class="sp-desc" data-en="“With Purpose” podcast, with Nashira Calvo" data-es="Podcast “With Purpose”, con Nashira Calvo">“With Purpose” podcast, with Nashira Calvo</span></li>
           <li><span class="sp-year">2025</span><span class="sp-desc" data-en="Intergenerational Panel, Gender Justice, UN Women / SADC" data-es="Panel Intergeneracional, Justicia de Género, ONU Mujeres / SADC">Intergenerational Panel, Gender Justice, UN Women / SADC</span></li>
-          <li data-keep="yes"><span class="sp-year">2024</span><span class="sp-desc" data-en="World Health Summit, Crisis and health" data-es="World Health Summit, Crisis y salud">World Health Summit, Crisis and health</span></li>
+          <li><span class="sp-year">2024</span><span class="sp-desc" data-en="World Health Summit, Crisis and health" data-es="World Health Summit, Crisis y salud">World Health Summit, Crisis and health</span></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ============ WRITING ============ -->
-  <section class="block" id="writing">
-    <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">05</span><span data-en="Writing" data-es="Escritos">Writing</span></p>
-        <h2 class="section-title" data-en="Notes &amp; opinion" data-es="Notas y opinión">Notes &amp; opinion</h2>
-      </div>
-      <div class="col-right reveal d1">
-        <p class="section-intro"
+  <!-- ============ ESCRITOS + PRENSA ============ -->
+  <section class="pubs" id="writing">
+    <div class="wrap pgrid">
+      <div class="pcol reveal">
+        <p class="sec-eye" data-en="Writing" data-es="Escritos">Writing</p>
+        <h2 class="sec-t" data-en="Notes <em>&amp; opinion</em>" data-es="Notas <em>y opinión</em>">Notes <em>&amp; opinion</em></h2>
+        <p class="sec-intro"
            data-en="Notes and opinion pieces on health governance, systems and equity. Occasional, and written to be argued with."
            data-es="Notas y columnas de opinión sobre gobernanza, sistemas y equidad en salud. Ocasionales, y escritas para ser discutidas.">Notes and opinion pieces on health governance, systems and equity. Occasional, and written to be argued with.</p>
 
         <!-- Para publicar una nota nueva: duplicá writing/_plantilla.html, escribí el texto,
              y agregá acá arriba de todo un nuevo <a class="writing-item"> apuntando al archivo. -->
         <div class="writing-list">
+          <a class="writing-item" href="writing/codigo-postal-codigo-genetico.html">
+            <span class="wr-year">2026</span>
+            <span class="wr-text">
+              <span class="wr-title"
+                    data-en="Your postcode matters more than your genetic code"
+                    data-es="El código postal pesa más que el código genético">Your postcode matters more than your genetic code</span>
+              <span class="wr-standfirst"
+                    data-en="In Argentina, where you are born shapes how long you live. Inequality is not a social issue that affects health: it is a cause of death, measurable and avoidable."
+                    data-es="En Argentina, dónde nacés define cuánto vivís. La desigualdad no es un tema social que afecta la salud: es una causa de muerte, medible y evitable.">In Argentina, where you are born shapes how long you live. Inequality is not a social issue that affects health: it is a cause of death, measurable and avoidable.</span>
+            </span>
+            <span class="wr-arrow" aria-hidden="true">→</span>
+          </a>
           <a class="writing-item" href="writing/salud-sin-costo-politico-argentina.html">
             <span class="wr-year">2026</span>
             <span class="wr-text">
@@ -392,25 +410,18 @@
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ PRESS ============ -->
-  <section class="block" id="press">
-    <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">06</span><span data-en="Press" data-es="Prensa">Press</span></p>
-        <h2 class="section-title" data-en="In the media" data-es="En los medios">In the media</h2>
-      </div>
-      <div class="col-right reveal d1">
-        <p class="section-intro"
+      <div class="pcol pcol-b reveal d1" id="press">
+        <p class="sec-eye" data-en="Press" data-es="Prensa">Press</p>
+        <h2 class="sec-t" data-en="In the <em>media</em>" data-es="En los <em>medios</em>">In the <em>media</em></h2>
+        <p class="sec-intro"
            data-en="Interviews, panels and coverage. Selected appearances in national media."
            data-es="Entrevistas, paneles y coberturas. Una selección de apariciones en medios nacionales.">Interviews, panels and coverage. Selected appearances in national media.</p>
 
         <div class="press-list">
           <a class="press-item" href="https://www.infobae.com/movant/2026/06/05/logistica-y-equidad-los-dos-ejes-que-definen-la-transformacion-del-sistema-de-salud/" target="_blank" rel="noopener">
-            <span class="pr-outlet">Infobae</span>
             <span class="pr-text">
+              <span class="pr-outlet">Infobae</span>
               <span class="pr-title"
                     data-en="Logistics and equity: the two axes defining the transformation of the health system"
                     data-es="Logística y equidad: los dos ejes que definen la transformación del sistema de salud">Logistics and equity: the two axes defining the transformation of the health system</span>
@@ -419,8 +430,8 @@
             <span class="pr-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="press-item" href="https://www.infobae.com/salud/ciencia/2026/05/29/salud-de-la-mujer-en-argentina-expertos-analizaron-brechas-y-avances-hacia-una-atencion-medica-mas-equitativa/" target="_blank" rel="noopener">
-            <span class="pr-outlet">Infobae</span>
             <span class="pr-text">
+              <span class="pr-outlet">Infobae</span>
               <span class="pr-title"
                     data-en="Women's health in Argentina: experts examined gaps and progress toward more equitable care"
                     data-es="Salud de la mujer en Argentina: expertos analizaron brechas y avances hacia una atención médica más equitativa">Women's health in Argentina: experts examined gaps and progress toward more equitable care</span>
@@ -429,8 +440,8 @@
             <span class="pr-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="press-item" href="https://www.infobae.com/sociedad/2024/01/02/emilia-caro-en-la-argentina-se-mueren-mas-mujeres-por-infartos-y-por-acv-que-por-cancer-de-mama/" target="_blank" rel="noopener">
-            <span class="pr-outlet">Infobae</span>
             <span class="pr-text">
+              <span class="pr-outlet">Infobae</span>
               <span class="pr-title"
                     data-en="“In Argentina, more women die of heart attacks and strokes than of breast cancer”"
                     data-es="“En la Argentina se mueren más mujeres por infartos y por ACV que por cáncer de mama”">“In Argentina, more women die of heart attacks and strokes than of breast cancer”</span>
@@ -439,8 +450,8 @@
             <span class="pr-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="press-item" href="https://mujereslideres.com.ar/2023/11/28/maria-emilia-caro-presidenta-de-wgh-argentina/" target="_blank" rel="noopener">
-            <span class="pr-outlet">Mujeres Líderes</span>
             <span class="pr-text">
+              <span class="pr-outlet">Mujeres Líderes</span>
               <span class="pr-title"
                     data-en="María Emilia Caro, President of WGH Argentina"
                     data-es="María Emilia Caro, Presidenta de WGH Argentina">María Emilia Caro, President of WGH Argentina</span>
@@ -449,8 +460,8 @@
             <span class="pr-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="press-item" href="https://www.infobae.com/salud/2023/07/07/cuales-son-las-claves-para-que-las-mujeres-profesionales-de-la-salud-alcancen-posiciones-de-liderazgo/" target="_blank" rel="noopener">
-            <span class="pr-outlet">Infobae</span>
             <span class="pr-text">
+              <span class="pr-outlet">Infobae</span>
               <span class="pr-title"
                     data-en="The keys for women health professionals to reach leadership positions"
                     data-es="Cuáles son las claves para que las mujeres profesionales de la salud alcancen posiciones de liderazgo">The keys for women health professionals to reach leadership positions</span>
@@ -466,80 +477,136 @@
     </div>
   </section>
 
-  <!-- ============ TOOLS ============ -->
-  <section class="block dark" id="tools">
-    <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">07</span><span data-en="Tools" data-es="Herramientas">Tools</span></p>
-        <h2 class="section-title" data-en="Try it yourself" data-es="Probalo vos">Try it yourself</h2>
+  <!-- ============ COMUNIDAD (Instagram) ============ -->
+  <section class="community" id="community">
+    <div class="wrap community-in reveal">
+      <span class="ico red community-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></span>
+      <div class="community-text">
+        <p class="sec-eye" data-en="Community" data-es="Comunidad">Community</p>
+        <h2 class="sec-t" data-en="Ongoing information <em>for the community</em>" data-es="Información constante <em>para la comunidad</em>">Ongoing information <em>for the community</em></h2>
+        <p data-en="On Instagram she shares, week after week, clear information about women's health and health systems: data, context and what can be done."
+           data-es="En Instagram comparte, semana a semana, información clara sobre salud de la mujer y sistemas de salud: datos, contexto y qué se puede hacer.">On Instagram she shares, week after week, clear information about women's health and health systems: data, context and what can be done.</p>
       </div>
-      <div class="col-right reveal d1">
-        <p class="section-intro"
-           data-en="Two short exercises built from published evidence. Nothing is stored, nothing is sent: everything runs in your browser."
-           data-es="Dos ejercicios breves construidos con evidencia publicada. No se guarda ni se envía nada: todo corre en tu navegador.">Two short exercises built from published evidence. Nothing is stored, nothing is sent: everything runs in your browser.</p>
-        <div class="tools-grid">
-          <a class="tool-card" href="tools/quiz.html">
-            <span class="tool-tag" data-en="9 questions · 3 min" data-es="9 preguntas · 3 min">9 questions · 3 min</span>
-            <h3 data-en="What do you actually know about women's health?"
-                data-es="¿Cuánto sabés realmente sobre la salud de las mujeres?">What do you actually know about women's health?</h3>
-            <p data-en="Nine questions where the intuitive answer is usually the wrong one. Each result comes with the data and its source."
-               data-es="Nueve preguntas donde la respuesta intuitiva suele ser la equivocada. Cada resultado viene con el dato y su fuente.">Nine questions where the intuitive answer is usually the wrong one. Each result comes with the data and its source.</p>
-            <span class="tool-go" data-en="Start" data-es="Empezar">Start</span>
-          </a>
-          <a class="tool-card" href="tools/brecha.html">
-            <span class="tool-tag" data-en="4 fields · instant" data-es="4 campos · instantáneo">4 fields · instant</span>
-            <h3 data-en="Measure your institution's leadership gap"
-                data-es="Medí la brecha de liderazgo de tu institución">Measure your institution's leadership gap</h3>
-            <p data-en="Enter four numbers from your organisation and see its representation gap against the sector benchmark, plus what it would take to close it."
-               data-es="Cargá cuatro números de tu organización y mirá su brecha de representación contra el benchmark del sector, y qué haría falta para cerrarla.">Enter four numbers from your organisation and see its representation gap against the sector benchmark, plus what it would take to close it.</p>
-            <span class="tool-go" data-en="Calculate" data-es="Calcular">Calculate</span>
-          </a>
+      <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener" class="btn-p community-btn"
+         data-en="Follow @mariaemiliacaro &rarr;" data-es="Seguir a @mariaemiliacaro &rarr;">Follow @mariaemiliacaro &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ============ HERRAMIENTAS (con la brecha en números) ============ -->
+  <section class="tools-sec dark-sec" id="tools">
+    <div class="wrap">
+      <!-- VERIFICAR antes de publicar: estos números vienen de las notas de Infobae.
+           Contrastar cada cifra contra la fuente original antes de dejarlos online. -->
+      <div class="gap-band reveal" id="stats">
+        <p class="stats-head" data-en="The gap, in numbers" data-es="La brecha, en números">The gap, in numbers</p>
+        <div class="gap-grid">
+          <div class="stat">
+            <span class="figure" data-count="70">70<span class="unit">%</span></span>
+            <span class="stat-label"
+                  data-en="of the health workforce in Argentina are women"
+                  data-es="de la fuerza laboral en salud en Argentina son mujeres">of the health workforce in Argentina are women</span>
+            <span class="stat-src">Infobae · 2024</span>
+          </div>
+          <div class="stat">
+            <span class="figure" data-count="25" data-prefix="&lt;">&lt;25<span class="unit">%</span></span>
+            <span class="stat-label"
+                  data-en="reach positions where decisions are actually made"
+                  data-es="llega a las posiciones donde se toman las decisiones">reach positions where decisions are actually made</span>
+            <span class="stat-src">Infobae · 2026</span>
+          </div>
+          <div class="stat">
+            <span class="figure" data-count="10" data-prefix="7–">7–10<span class="unit" data-en="yrs" data-es="años">yrs</span></span>
+            <span class="stat-label"
+                  data-en="to diagnose endometriosis in Latin America"
+                  data-es="para diagnosticar endometriosis en América Latina">to diagnose endometriosis in Latin America</span>
+            <span class="stat-src">Infobae · 2026</span>
+          </div>
+          <div class="stat">
+            <span class="figure" data-count="3">3<span class="unit">%</span></span>
+            <span class="stat-label"
+                  data-en="of national GDP is affected by women's health"
+                  data-es="del PBI está afectado por la salud de las mujeres">of national GDP is affected by women's health</span>
+            <span class="stat-src">Infobae · 2026</span>
+          </div>
         </div>
+      </div>
+
+      <div class="tools-head reveal">
+        <p class="sec-eye" data-en="Tools" data-es="Herramientas">Tools</p>
+        <h2 class="sec-t" data-en="Try it <em>yourself</em>" data-es="Probalo <em>vos</em>">Try it <em>yourself</em></h2>
+        <p class="sec-intro"
+           data-en="Two short exercises built from published evidence. Answers are stored anonymously, with no personal data, to better understand what we know about women's health."
+           data-es="Dos ejercicios breves construidos con evidencia publicada. Las respuestas se guardan de forma anónima, sin datos personales, para entender mejor qué sabemos sobre la salud de las mujeres.">Two short exercises built from published evidence. Answers are stored anonymously, with no personal data, to better understand what we know about women's health.</p>
+      </div>
+      <div class="tools-grid reveal d1">
+        <a class="tool-card" href="tools/quiz.html">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.6"/><circle cx="12" cy="16.8" r=".5" fill="currentColor"/></svg></span>
+          <span class="tool-tag" data-en="9 questions · 3 min" data-es="9 preguntas · 3 min">9 questions · 3 min</span>
+          <h3 data-en="What do you actually know about women's health?"
+              data-es="¿Cuánto sabés realmente sobre la salud de las mujeres?">What do you actually know about women's health?</h3>
+          <p data-en="Nine questions where the intuitive answer is usually the wrong one. Each result comes with the data and its source."
+             data-es="Nueve preguntas donde la respuesta intuitiva suele ser la equivocada. Cada resultado viene con el dato y su fuente.">Nine questions where the intuitive answer is usually the wrong one. Each result comes with the data and its source.</p>
+          <span class="tool-go" data-en="Start" data-es="Empezar">Start</span>
+        </a>
+        <a class="tool-card" href="tools/brecha.html">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 20.4h16.8M7.6 20.4V5.6M16.4 20.4v-5.2"/><path d="M16.4 11.6V5.6" stroke-dasharray="1.6 2"/><path d="M14.4 7.4 16.4 5.4l2 2"/></svg></span>
+          <span class="tool-tag" data-en="4 fields · instant" data-es="4 campos · instantáneo">4 fields · instant</span>
+          <h3 data-en="Measure your institution's leadership gap"
+              data-es="Medí la brecha de liderazgo de tu institución">Measure your institution's leadership gap</h3>
+          <p data-en="Enter four numbers from your organisation and see its representation gap against the sector benchmark, plus what it would take to close it."
+             data-es="Cargá cuatro números de tu organización y mirá su brecha de representación contra el benchmark del sector, y qué haría falta para cerrarla.">Enter four numbers from your organisation and see its representation gap against the sector benchmark, plus what it would take to close it.</p>
+          <span class="tool-go" data-en="Calculate" data-es="Calcular">Calculate</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="block" id="contact">
-    <div class="wrap">
-      <div class="col-left reveal">
-        <p class="kicker"><span class="num">08</span><span data-en="Contact" data-es="Contacto">Contact</span></p>
-        <h2 class="section-title" data-en="Get in touch" data-es="Contacto">Get in touch</h2>
+  <!-- ============ CONTACTO ============ -->
+  <section class="contact-sec" id="contact">
+    <div class="wrap cgrid">
+      <div class="cinfo reveal">
+        <p class="sec-eye" data-en="Contact" data-es="Contacto">Contact</p>
+        <h2 class="sec-t" data-en="Get in <em>touch</em>" data-es="Ponete en <em>contacto</em>">Get in <em>touch</em></h2>
+        <p data-en="For press, speaking invitations or institutional proposals, use the form or reach out through these channels."
+           data-es="Para prensa, invitaciones a conferencias o propuestas institucionales, escribí por el formulario o por estos canales.">For press, speaking invitations or institutional proposals, use the form or reach out through these channels.</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+          <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".7" fill="currentColor"/></svg></a>
+        </div>
       </div>
-      <div class="col-right reveal d1">
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqkzapw" method="POST">
+
+      <form class="contact-form reveal d1" id="contactForm" action="https://formspree.io/f/xaqkzapw" method="POST">
+        <div class="field">
+          <label for="cf-subject" data-en="Reason for contact" data-es="Motivo de contacto">Reason for contact</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="" disabled selected data-en="Select one…" data-es="Seleccionar…">Select one…</option>
+            <option value="Press" data-en="Press" data-es="Prensa">Press</option>
+            <option value="Speaking" data-en="Speaking" data-es="Charlas">Speaking</option>
+            <option value="Institutional proposal" data-en="Institutional proposal" data-es="Propuesta institucional">Institutional proposal</option>
+            <option value="Other" data-en="Other" data-es="Otros">Other</option>
+          </select>
+        </div>
+        <div class="field-row">
           <div class="field">
-            <label for="cf-subject" data-en="Reason for contact" data-es="Motivo de contacto">Reason for contact</label>
-            <select id="cf-subject" name="subject" required>
-              <option value="" disabled selected data-en="Select one…" data-es="Seleccionar…">Select one…</option>
-              <option value="Press" data-en="Press" data-es="Prensa">Press</option>
-              <option value="Speaking" data-en="Speaking" data-es="Charlas">Speaking</option>
-              <option value="Institutional proposal" data-en="Institutional proposal" data-es="Propuesta institucional">Institutional proposal</option>
-              <option value="Other" data-en="Other" data-es="Otros">Other</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="cf-name" data-en="Name" data-es="Nombre">Name</label>
-              <input type="text" id="cf-name" name="name" required>
-            </div>
-            <div class="field">
-              <label for="cf-email" data-en="Email" data-es="Correo">Email</label>
-              <input type="email" id="cf-email" name="email" required>
-            </div>
+            <label for="cf-name" data-en="Name" data-es="Nombre">Name</label>
+            <input type="text" id="cf-name" name="name" required>
           </div>
           <div class="field">
-            <label for="cf-message" data-en="Message" data-es="Mensaje">Message</label>
-            <textarea id="cf-message" name="message" rows="5" required></textarea>
+            <label for="cf-email" data-en="Email" data-es="Correo">Email</label>
+            <input type="email" id="cf-email" name="email" required>
           </div>
-          <button type="submit" class="form-submit"
-                  data-en="Send message" data-es="Enviar mensaje"
-                  data-sending-en="Sending…" data-sending-es="Enviando…">Send message</button>
-          <p class="form-status" id="formStatus"
-             data-ok-en="Thank you. Your message has been sent." data-ok-es="Gracias. Tu mensaje fue enviado."
-             data-err-en="Something went wrong. Please write to mariaemiliacaro@gmail.com." data-err-es="Hubo un error. Por favor escribí a mariaemiliacaro@gmail.com."></p>
-        </form>
-      </div>
+        </div>
+        <div class="field">
+          <label for="cf-message" data-en="Message" data-es="Mensaje">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="form-submit"
+                data-en="Send message" data-es="Enviar mensaje"
+                data-sending-en="Sending…" data-sending-es="Enviando…">Send message</button>
+        <p class="form-status" id="formStatus"
+           data-ok-en="Thank you. Your message has been sent." data-ok-es="Gracias. Tu mensaje fue enviado."
+           data-err-en="Something went wrong. Please write to mariaemiliacaro@gmail.com." data-err-es="Hubo un error. Por favor escribí a mariaemiliacaro@gmail.com."></p>
+      </form>
     </div>
   </section>
 
@@ -547,13 +614,19 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span class="footer-name">Emilia Caro</span>
-    <span class="footer-links">
-      <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener">Instagram</a>
-    </span>
-    <span class="footer-year">© <span id="year"></span></span>
+    <div class="footer-brand">
+      <span class="footer-name">Emilia Caro</span>
+      <span class="footer-sub" data-en="Health systems · Governance" data-es="Sistemas de salud · Gobernanza">Health systems · Governance</span>
+    </div>
+    <div>
+      <p class="footer-h" data-en="Follow" data-es="Seguime">Follow</p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/emiliacaro/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
+        <a href="https://www.instagram.com/mariaemiliacaro" target="_blank" rel="noopener" aria-label="Instagram"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".7" fill="currentColor"/></svg></a>
+      </div>
+    </div>
   </div>
+  <div class="wrap footer-bot">© <span id="year"></span> Emilia Caro</div>
 </footer>
 
 <script src="script.js"></script>

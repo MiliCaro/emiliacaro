@@ -7,9 +7,32 @@
 (function () {
   'use strict';
 
-  /* ---- Language toggle (EN default, persists in this session) ---- */
+  /* ---- Respuestas anónimas del quiz y la calculadora → Google Sheets ----
+     Pegar acá la URL de la aplicación web de Apps Script (termina en /exec).
+     Instrucciones en integraciones/google-sheets.gs. Vacía = no se envía nada. */
+  var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzMWfxKdqS1A8aVoVMYK5-9-PhGyKDM51KAoay2FpcYySojvafnRDKvk012bXjSexTF/exec';
+
+  window.saveResponse = function (data) {
+    if (!SHEETS_URL) return;
+    data.idioma = window.siteLang;
+    try {
+      // text/plain evita el preflight de CORS; la respuesta no se necesita
+      fetch(SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        keepalive: true,
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data)
+      }).catch(function () {});
+    } catch (e) {}
+  };
+
+  /* ---- Language toggle (ES por defecto; la elección se recuerda en la sesión) ---- */
+  // El HTML trae el texto en inglés: al cargar se pasa a español (o al idioma elegido antes).
   var current = 'en';
   var toggle = document.getElementById('langToggle');
+  var saved = null;
+  try { saved = sessionStorage.getItem('siteLang'); } catch (e) {}
 
   function applyLang(lang) {
     current = lang;
@@ -38,15 +61,13 @@
 
   if (toggle) {
     toggle.addEventListener('click', function () {
-      applyLang(current === 'en' ? 'es' : 'en');
+      var next = current === 'en' ? 'es' : 'en';
+      applyLang(next);
+      try { sessionStorage.setItem('siteLang', next); } catch (e) {}
     });
   }
 
-  /* ---- Optional: prefer Spanish only if browser is clearly es-* ----
-     Brief §9 wants English as default for international visits, so we
-     keep EN as the baseline and do NOT auto-switch. Uncomment to enable
-     a soft preference for local (Argentine) visitors instead. */
-  // if ((navigator.language || '').toLowerCase().indexOf('es') === 0) applyLang('es');
+  applyLang(saved === 'en' ? 'en' : 'es');
 
   /* ---- Mobile menu ---- */
   var burger = document.getElementById('burger');
