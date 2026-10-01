@@ -55,6 +55,10 @@ Las respuestas se guardan de forma anónima en una planilla de Google Sheets. Si
 - **Calculadora:** se guarda una fila cuando la persona deja de tipear, con los cuatro números y la brecha resultante.
 - Si se cambian las preguntas del quiz, actualizar los encabezados `P1`…`P8` en el script de la planilla.
 
+## Estadísticas de visitas
+
+Todas las páginas cargan **Vercel Web Analytics** (`/_vercel/insights/script.js`, en el `<head>`). Se ve en Vercel → proyecto → pestaña *Analytics*: visitas, visitantes únicos, páginas más leídas, origen (LinkedIn, Google…), país y dispositivo. No usa cookies ni identifica personas. Al crear una página nueva desde `writing/_plantilla.html` ya viene incluido.
+
 ## Pendientes
 
 Las cifras se verificaron contra sus fuentes (septiembre 2026). Las oficiales (INC, INDEC, Estadísticas Vitales) coinciden; las de Infobae se reescribieron para decir exactamente lo que dice la nota. Quedan sin fuente primaria:
