@@ -33,7 +33,7 @@ Todos los tokens viven en `:root` al inicio de `styles.css`. Cambiar un color ah
 
 ## Secciones de la home
 
-Hero · Mirada (la desigualdad como causa de muerte) · Áreas de trabajo · Bio + alcance (68+ países, 100+ organizaciones del consorcio de cáncer colorrectal, 15 de la alianza por la salud de la mujer) · Roles · Conferencias · Escritos y Prensa · Comunidad (Instagram) · Herramientas (abre con "La brecha, en números") · Contacto
+Hero ("Construyo lo que todavía no existe") · Mirada (la desigualdad como causa de muerte, y la tesis del código postal) · Áreas de trabajo · Bio completa + bio corta para prensa con botón de copiar + alcance (60+ países, 100+ organizaciones del consorcio de cáncer colorrectal, 15 de la alianza por la salud de la mujer) · Roles · Conferencias · Escritos y Prensa · Comunidad (Instagram) · Herramientas (abre con "La brecha, en números") · Contacto
 
 ## Cómo editar
 

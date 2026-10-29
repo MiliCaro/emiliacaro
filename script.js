@@ -69,6 +69,18 @@
 
   applyLang(saved === 'en' ? 'en' : 'es');
 
+  /* ---- Botón "Copiar" (bio corta para prensa) ---- */
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var src = document.getElementById(btn.getAttribute('data-copy'));
+      if (!src || !navigator.clipboard) return;
+      navigator.clipboard.writeText(src.textContent.trim()).then(function () {
+        btn.textContent = btn.getAttribute('data-done-' + current);
+        setTimeout(function () { btn.textContent = btn.getAttribute('data-' + current); }, 2000);
+      }).catch(function () {});
+    });
+  });
+
   /* ---- Mobile menu ---- */
   var burger = document.getElementById('burger');
   var menu = document.getElementById('mobileMenu');
